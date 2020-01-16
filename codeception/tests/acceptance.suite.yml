@@ -1,49 +1,6 @@
-#class_name: AcceptanceTester
-#modules:
- #   enabled:
-  #       - \Helper\Acceptance
-       # - WPWebDriver
-   #      - Asserts
-    #config:
-            # WPWebDriver:
-            # port: 9515
-            # browser: 'chrome'
-     #       url: 'https://rteed:rtCpune@puja-addontest.blr.rtdemo.in/'
-      #      adminUsername: ''
-       #     adminPassword: ''
-        #    adminPath: '/wp-admin'
-         #   window_size: 1280x900
-
-# Codeception Test Suite Configuration
-
-# Suite for WordPress acceptance tests.
-# Perform tests using or simulating a browser.
-
-class_name: AcceptanceTester
+actor: AcceptanceTester
 modules:
     enabled:
+        - PhpBrowser:
+            url: 'https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/'
         - \Helper\Acceptance
-        #- WPWebDriver
-        - Asserts
-    config:
-        #WPWebDriver:
-            #host: 'hub-cloud.browserstack.com'
-            port: 80
-            browser: 'chrome'
-            url: 'https://rtmedia-dev.rtm.rt.gw/'
-            adminUsername: ''
-            adminPassword: ''
-            adminPath: '/wp-admin'
-            #capabilities:
-             #   'browserstack.user': 'rtcamp3'
-              #  'browserstack.key': '%BROWSERSTACK_ACCESS_KEY%'
-               # 'os': 'OS X'
-                #'os_version': 'mojave'
-                #'browser_version': '78'
-                #'browserstack.debug': 'true'
-                #'browserstack.networkLogs': 'true'
-                #'build': '%TRAVIS_BUILD_NUMBER%'
-                #'project': 'rtMedia Automation - 2019'
-                #'browserstack.local': 'true'
-                #'browserstack.use_w3c': 'true'
-                # 'browserstack.selenium_version': '2.53.0'
