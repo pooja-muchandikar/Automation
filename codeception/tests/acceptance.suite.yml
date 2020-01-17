@@ -2,5 +2,7 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: 'https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/'
+        #- WebDriver:
+            url: 'https://rtmedia.io/'
+         #   browser: chrome
         - \Helper\Acceptance

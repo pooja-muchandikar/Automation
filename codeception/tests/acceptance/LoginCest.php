@@ -1,25 +1,21 @@
 <?php
 
-namespace Page;
-use Page\Constants as ConstantsPage;
-
-class Login 
+class FirstCest 
 {
-    #protected $tester;
-    #public function __construct( \AcceptanceTester $I ) {
-	#	$this->tester = $I;
-	#}
+
     public function frontpageWorks(AcceptanceTester $I)
     {
-        $I->amOnPage('https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/');
-        $I->see('Home');
+        #$I->amOnPage('https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/');
+        #$I->amOnPage('https://rtmedia.io');
         $I->amOnPage( '/wp-admin' );
-        $I->seeElement( ConstantsPage::$wpUserNameField );
-		$I->fillfield( ConstantsPage::$wpUserNameField, $wpUserName );
-		$I->seeElement( ConstantsPage::$wpPasswordField );
-		$I->fillfield( ConstantsPage::$wpPasswordField, $wpPassword );
-		$I->click( ConstantsPage::$wpSubmitButton );
-		$I->waitForElement( ConstantsPage::$wpDashboard, 10 );
+        $I->pause();
+        $I->seeElement('#user_login');
+        $I->fillField('#user_login', 'pooja.muchandikar');
+        $I->seeElement('#user_pass');
+        $I->fillField('#user_pass', '1100');
+        $I->seeElement('#wp-submit');
+        $I->click('#wp-submit');
+
     }
 }
 
