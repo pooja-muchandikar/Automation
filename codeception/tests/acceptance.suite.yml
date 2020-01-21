@@ -1,8 +1,10 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-        #- WebDriver:
-            url: 'https://rtmedia.io/'
-         #   browser: chrome
+        #- PhpBrowser:
+        - WebDriver:
+            #url: 'https://rtmedia.io/'
+            url: 'https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/'
+            browser: chrome
+            port: 9515
         - \Helper\Acceptance
