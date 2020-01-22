@@ -1,8 +1,8 @@
 <?php
 
-use \Codeception\Util\Locator;
+#use \Codeception\Util\Locator;
 
-class PostCest
+class PageCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
@@ -14,13 +14,9 @@ class PostCest
         $I->fillField('#user_pass', '1100');
         $I->seeElement('#wp-submit');
         $I->click('#wp-submit');
-        $I->seeElement('#menu-posts');
-        $I->click('#menu-posts');
+        $I->seeElement('#menu-pages');
+        $I->click('#menu-pages');
         $I->wait(3);
-        $I->amOnPage('/wp-admin/post-new.php');
-        $I->seeElement('#post-title-0');
-        $I->fillField('#post-title-0', 'LoremIpsum this is test post');
-        $I->wait(2);
-        $I->click('.button.components-button.editor-post-publish-panel__toggle.is-button.is-primary');
+    
     }
 }
