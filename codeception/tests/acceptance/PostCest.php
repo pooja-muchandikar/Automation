@@ -21,6 +21,12 @@ class PostCest
         $I->seeElement('#post-title-0');
         $I->fillField('#post-title-0', 'LoremIpsum this is test post');
         $I->wait(2);
-        $I->click('.button.components-button.editor-post-publish-panel__toggle.is-button.is-primary');
+        $I->seeElement('.edit-post-header .components-button.editor-post-publish-button, .edit-post-header .components-button.editor-post-publish-panel__toggle');
+        $I->click('.edit-post-header .components-button.editor-post-publish-button, .edit-post-header .components-button.editor-post-publish-panel__toggle');
+        $I->seeElement('.editor-post-publish-button');
+        $I->click('.editor-post-publish-button');
+
+
+
     }
 }
