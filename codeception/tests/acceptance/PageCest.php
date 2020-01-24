@@ -1,19 +1,24 @@
 <?php
 
+use Page\Login as LoginPage;
+use Page\Logout as LogoutPage;
+use Page\Constants as ConstantsPage;
 #use \Codeception\Util\Locator;
 
 class PageCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
-        $I->amOnPage( '/wp-admin' );
-        $I->pause();
-        $I->seeElement('#user_login');
-        $I->fillField('#user_login', 'pooja.muchandikar');
-        $I->seeElement('#user_pass');
-        $I->fillField('#user_pass', '1100');
-        $I->seeElement('#wp-submit');
-        $I->click('#wp-submit');
+        $loginPage = new LoginPage( $I );
+        $loginPage->loginAsAdmin();
+        // $I->amOnPage( '/wp-admin' );
+        // $I->pause();
+        // $I->seeElement('#user_login');
+        // $I->fillField('#user_login', 'pooja.muchandikar');
+        // $I->seeElement('#user_pass');
+        // $I->fillField('#user_pass', '1100');
+        // $I->seeElement('#wp-submit');
+        // $I->click('#wp-submit');
         $I->seeElement('#menu-pages');
         $I->click('#menu-pages');
         $I->wait(3);
@@ -26,6 +31,9 @@ class PageCest
         $I->click('.edit-post-header .components-button.editor-post-publish-button, .edit-post-header .components-button.editor-post-publish-panel__toggle');
         $I->seeElement('.editor-post-publish-button');
         $I->click('.editor-post-publish-button');
+        $I->wait(1);
+        $logout = new LogoutPage( $I );
+        $logout->logout();
     
     }
 }

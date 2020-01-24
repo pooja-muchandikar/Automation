@@ -10,5 +10,12 @@ class Constants {
 	 public static $wpPasswordField = 'input#user_pass';
 	 public static $wpSubmitButton = 'input#wp-submit';
 
+	 //Logout Selectors
+	 public static $adminBarMenuSelector = '#wp-admin-bar-my-account';
+	 public static $logoutLink = '#wp-admin-bar-user-actions #wp-admin-bar-logout a';
+
+	 public static $saveSession = false;
+
+
 }
 ?>

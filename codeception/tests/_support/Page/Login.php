@@ -36,6 +36,6 @@ class Login {
 			echo nl2br( "Session Not Saved! \n" );
 		}
 		$I->reloadPage();
-		// $I->maximizeWindow();
+		#$I->maximizeWindow();
 	}
 }
