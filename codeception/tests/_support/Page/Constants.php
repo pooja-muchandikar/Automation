@@ -16,6 +16,12 @@ class Constants {
 
 	 public static $saveSession = false;
 
+	 public static $emailField = 'input#input_69_1';
+	 public static $validateField ='input#gform_submit_button_69';
+	 public static $textField = 'puja@rtcamp.com';
+	 public static $textField1 = 'abc';
+
+	
 
 }
 ?>

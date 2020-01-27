@@ -7,4 +7,6 @@ modules:
             url: 'https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/'
             browser: chrome
             port: 9515
+            window_size: 'maximize'
+
         - \Helper\Acceptance
