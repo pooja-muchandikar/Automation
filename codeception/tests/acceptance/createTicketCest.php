@@ -5,7 +5,7 @@ use Page\Logout as LogoutPage;
 use Page\Constants as ConstantsPage;
 #use \Codeception\Util\Locator;
 
-class PageCest
+class createTicketCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
