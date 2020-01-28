@@ -2,7 +2,10 @@
 namespace Page;
 class Constants {
 	// Username and Password
-	public static $userName = 'pooja.muchandikar';
+	// public static $userName = 'pooja.muchandikar';
+	// public static $password = '1100';
+
+	public static $userName = 'pujam1';
 	public static $password = '1100';
 	
 	 // Login Selectors
