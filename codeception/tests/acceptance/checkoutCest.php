@@ -30,7 +30,12 @@ class checkoutCest
         echo "..........Purchase History Page........";
 
         $I->amOnPage('/checkout/purchase-confirmation/');
+
+        $I->click('.user-acount.shrink');
+        $I->seeElement('.edd_download_file');
+        $I->click('.edd_download_file');
         
+        echo ".........ZIP Downloaded Successfully..........";
     }
 }
 
