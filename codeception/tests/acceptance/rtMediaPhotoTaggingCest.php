@@ -58,8 +58,8 @@ class rtMediaPhotoTaggingCest
        $I->wait(2);
 
        $I->scrollTo('#rtmedia-tag-form');
-       $I->seeElement('.button item-button bp-secondary-action bp-media-tag-button rtmedia-action-buttons');
-       $I->click('.button item-button bp-secondary-action bp-media-tag-button rtmedia-action-buttons');
+       $I->seeElement('.button.button.item-button.bp-secondary-action.bp-media-tag-button.rtmedia-action-buttons');
+       $I->click('.button.button.item-button.bp-secondary-action.bp-media-tag-button.rtmedia-action-buttons');
 
        $I->click('#rtmedia-media-460');
        $I->seeElement('#bp-media-tag-input');
