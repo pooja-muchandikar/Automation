@@ -1,17 +1,24 @@
 <?php
 
+use Page\Login1 as LoginPage;
+use Page\Logout as LogoutPage;
+use Page\Constants as ConstantsPage;
 
 class rtMediaPhotoTaggingCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
-       $I->amOnPage('/wp-admin');
-       $I->seeElement('#user_login');
-       $I->fillField('#user_login', 'pooja');
-       $I->seeElement('#user_pass');
-       $I->fillField('#user_pass', '1100');
-       $I->seeElement('#wp-submit');
-       $I->click('#wp-submit');
+
+      $loginPage = new LoginPage( $I );
+      $loginPage->loginAsAdmin();
+
+       //$I->amOnPage('/wp-admin');
+      //  $I->seeElement('#user_login');
+      //  $I->fillField('#user_login', 'pooja');
+      //  $I->seeElement('#user_pass');
+      //  $I->fillField('#user_pass', '1100');
+      //  $I->seeElement('#wp-submit');
+      //  $I->click('#wp-submit');
 
        $I->amOnPage( '/wp-admin/plugins.php?plugin_status=all' );
 
@@ -74,6 +81,9 @@ class rtMediaPhotoTaggingCest
        $I->wait(2);
 
        $I->closeTab();
+
+       $logout = new LogoutPage( $I );
+       $logout->logout();
     
 
 

@@ -24,6 +24,17 @@ class Constants {
 	 public static $textField = 'puja@rtcamp.com';
 	 public static $textField1 = 'abc';
 
+	 //Login for add-ons
+
+	 public static $userName1 = 'pooja';
+	 public static $password1 = '1100';
+
+	 public static $wpUserNameField1 = 'input#user_login';
+	 public static $wpPasswordField1 = 'input#user_pass';
+	 public static $wpSubmitButton1 = 'input#wp-submit';
+
+	 
+
 	
 
 }
