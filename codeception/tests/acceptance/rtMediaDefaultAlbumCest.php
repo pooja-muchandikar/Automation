@@ -21,12 +21,16 @@ class rtMediaDefaultAlbumCest
       $I->wait(2);
       $I->seeElement('#rtm_new_global_album');
       $I->fillField('#rtm_new_global_album', 'MyAlbum');
-      //$I->seeElement('.add_global_album');
-      $I -> click(['class' => 'button']);
+      $I->wait(2);
+      $I->click('input[name="rtmedia-options[add_new_global_album]"]');
       $I->wait(2);
 
+      echo "..........Delete Album..........";
+      $I->seeElement('.rtm-delete-td');
+      $I->seeElement('#delete_global_album_496');
+      $I->click('.delete-label');
 
-    //   $I->click('.rtmedia-options[add_new_global_album]');
+
 
 
     }
