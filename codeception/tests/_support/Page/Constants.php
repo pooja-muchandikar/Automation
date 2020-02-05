@@ -38,13 +38,26 @@ class Constants {
 	 //public static $selectFileButton = 'input#rtMedia-upload-button';
 	 public static $uploadMediaButton = '#rtmedia-upload-container .start-media-upload';
 	 public static $startUpload = '.start-media-upload';
+	 public static $saveSettingsButtonBottom = '.rtm-button-container.bottom .rtmedia-settings-submit';
+	 public static $topSaveButton = '.rtm-button-container.top input.rtmedia-settings-submit';
+
+	 public static $uploadUI = '#rtm_show_upload_ui';
+	 public static $privacy = '#rtSelectPrivacy';
+	 public static $uploadButton = '#rtMedia-upload-button';
+	 public static $uploadFile = 'div.moxie-shim.moxie-shim-html5 input[type=file]';
+	 public static $fileList = '#rtmedia_uploader_filelist';
+	 public static $mediaUploadLink = '.rtm-media-options.rtm-media-search-enable>*:nth-last-child(2)';
 
 
 
+	 //Dummy data
+	 public static $audioName = 'dummydata/Music/mpthreetest.mp3';
+	 public static $imageName = 'dummydata/Images/images.jpeg';
+	 public static $videoName = 'dummydata/Video/test.mp4';
 
 
 	 public static $uploadURL = 'rtmedia_url_upload_input';
-	 public static $uploadFile = 'https://pluspng.com/img-png/sunset-png-hd-sunset-sun-holiday-nature-tree-isolated-scenic-960.png';
+	 public static $uploadFile2 = 'https://pluspng.com/img-png/sunset-png-hd-sunset-sun-holiday-nature-tree-isolated-scenic-960.png';
 	 public static $uploadFile1= 'https://s4.aconvert.com/convert/p3r68-cdx67/af3al-i9sm6.jpg';
 	 public static $uploadmusicFile = 'https://s21.aconvert.com/convert/p3r68-cdx67/ugvgh-162n1.mp3';
 	 public static $uploadvideoFile = 'https://s17.aconvert.com/convert/p3r68-cdx67/o1u69-5sdl2.mp4';
