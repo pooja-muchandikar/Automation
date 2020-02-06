@@ -73,6 +73,10 @@ class Constants {
 	 public static $bpComponentsUrl = '/wp-admin/options-general.php?page=bp-components/';
 
 
+	 public static $enablePlaylistCheckbox = 'input[name="rtmedia-options[general_enablePlaylist]"]';
+
+
+
 	 
 
 	
