@@ -38,6 +38,7 @@ class rtMediaWaterMarkCest
       $I->click('input[id="toaster"]');
 
       $I->click('input[class="input.button.rtm-button.rtm-button-save"]');
+      
 
 
     }
