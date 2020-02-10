@@ -35,7 +35,6 @@ class Constants {
 	 
 
 	 public static $uploadTermsCheckbox = 'input[name="rtmedia_upload_terms_conditions"]';
-	 //public static $selectFileButton = 'input#rtMedia-upload-button';
 	 public static $uploadMediaButton = '#rtmedia-upload-container .start-media-upload';
 	 public static $startUpload = '.start-media-upload';
 	 public static $saveSettingsButtonBottom = '.rtm-button-container.bottom .rtmedia-settings-submit';
@@ -78,8 +77,5 @@ class Constants {
 
 
 	 
-
-	
-
 }
 ?>
