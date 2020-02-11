@@ -43,6 +43,44 @@ class rtMediaAlbumPrivacyCest
 
       echo ".....Album Privacy Set.....";
 
+      //Edit Media Privacy
+
+      $I->seeElement('.rtmedia-list-item-a');
+      $I->click('.rtmedia-list-item-a');
+
+      $I->scrollTo('#rtm-media-options-list');
+      $I->wait(2);
+      $I->click('.button.rtmedia-edit.rtmedia-action-buttons.button');
+      $I->wait(2);
+
+      $I->scrollTo('.rtmedia-container.rtmedia-single-container.rtmedia-media-edit');
+      $I->seeElement('#rtSelect0');
+      $I->selectOption('#rtSelect0', '40');
+      $I->click('input.button.rtm-button.rtm-button-save');
+      $I->wait(2);
+
+      echo ".....Media Privacy Edited successfully.....";
+
+      //Edit album privacy
+
+      $I->seeElement('#rtmedia-nav-item-albums');
+      $I->click('#rtmedia-nav-item-albums');
+
+      $I->seeElement('.rtmedia-item-thumbnail');
+      $I->click('.rtmedia-item-thumbnail');
+
+      $I->seeElement('#rtm-media-options-list');
+      $I->click('#rtm-media-options-list');
+
+      $I->seeElement('.rtmedia-edit a');
+      $I->click('.rtmedia-edit a');
+
+      $I->scrollTo('.rtmedia-container.rtmedia-single-container.rtmedia-media-edit');
+
+
+
+
+
     }
 }
 
