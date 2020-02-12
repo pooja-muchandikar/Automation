@@ -11,6 +11,8 @@ class singlepageCheckoutCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
 
+        $I->amOnPage('/my-account');
+
         $I->seeElement('#menu-item-2512333');
         $I->click('#menu-item-2512333');
 

@@ -11,6 +11,8 @@ class transcoderCheckoutCest
         $I->amOnPage('/');
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
+
+        $I->amOnPage('/my-account');
        
         $I->seeElement('#menu-item-163176');
         $I->click('#menu-item-163176');
