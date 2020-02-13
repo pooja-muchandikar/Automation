@@ -2,11 +2,11 @@
 namespace Page;
 class Constants {
 	// Username and Password
-	public static $userName = 'pooja.muchandikar';
-	public static $password = '1100';
-
-	// public static $userName = 'pujam1';
+	// public static $userName = 'pooja.muchandikar';
 	// public static $password = '1100';
+
+	public static $userName = 'pooja';
+	public static $password = '1100';
 	
 	 // Login Selectors
 	 public static $wpUserNameField = 'input#user_login';

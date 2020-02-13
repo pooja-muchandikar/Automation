@@ -75,7 +75,7 @@ class rtMediaAlbumPrivacyCest
       $I->seeElement('.rtmedia-edit a');
       $I->click('.rtmedia-edit a');
 
-      $I->scrollTo('.rtmedia-container.rtmedia-single-container.rtmedia-media-edit');
+      $I->scrollTo('.rtmedia-container.rtmedia-single-container.rtmedia-media-edit'); 
 
 
 
