@@ -12,14 +12,6 @@ class rtMediaPhotoTaggingCest
       $loginPage = new LoginPage( $I );
       $loginPage->loginAsAdmin();
 
-       //$I->amOnPage('/wp-admin');
-      //  $I->seeElement('#user_login');
-      //  $I->fillField('#user_login', 'pooja');
-      //  $I->seeElement('#user_pass');
-      //  $I->fillField('#user_pass', '1100');
-      //  $I->seeElement('#wp-submit');
-      //  $I->click('#wp-submit');
-
        $I->amOnPage( '/wp-admin/plugins.php?plugin_status=all' );
 
        $I->moveMouseOver('li#wp-admin-bar-my-account');
@@ -30,16 +22,13 @@ class rtMediaPhotoTaggingCest
        $I->click('.rtmedia-item-thumbnail');
        
        $I->scrollTo('#rtm-media-options-list');
-       $I->wait(2);
-
-    //    $I->seeElement('#rtm-media-options-list');
-    //    $I->click('#rtm-media-options-list');
+       $I->wait(2);   
        
        $I->seeElement('.button.button.item-button.bp-secondary-action.bp-media-tag-button.rtmedia-action-buttons');
        $I->click('.button.button.item-button.bp-secondary-action.bp-media-tag-button.rtmedia-action-buttons');
        
-       $I->seeElement('#rtmedia-media-461');
-       $I->click('#rtmedia-media-461');
+       $I->seeElement('#rtmedia-tag-form');
+       $I->click('#rtmedia-tag-form');
        
        $I->seeElement('#bp-media-tag-input');
        $I->fillField('#bp-media-tag-input', 'user');
