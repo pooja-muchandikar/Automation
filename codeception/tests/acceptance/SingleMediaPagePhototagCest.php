@@ -43,14 +43,32 @@ class rtMediaPhotoTaggingCest
 
       $I->seeElement('.rtmedia-item-thumbnail');
       $I->clickWithRightButton('.rtmedia-item-thumbnail');
-    //   $I->moveMouseOver('.rtmedia-item-thumbnail');
-    //   $I->seeElement('.rtmedia-gallery-item-actions');
-    //   $I->click('.no-popup');
       $I->wait(2);
 
-    //   $I->scrollTo('')
+      $I->switchToNextTab();
 
-    
+      $I->scrollTo('#rtmedia-tag-form');
+      $I->seeElement('.button.button.item-button.bp-secondary-action.bp-media-tag-button.rtmedia-action-buttons');
+      $I->click('.button.button.item-button.bp-secondary-action.bp-media-tag-button.rtmedia-action-buttons');
+
+      $I->click('#rtmedia-tag-form');
+      $I->seeElement('#bp-media-tag-input');
+      $I->fillField('#bp-media-tag-input', 'user');
+      $I->wait(2);
+
+      $I->seeElement('#ui-id-3 > a > span');
+      $I->click('#ui-id-3 > a > span');
+      $I->wait(2);
+
+      $I->seeElement('.button.button.item-button.bp-secondary-action.rtmedia-action-buttons.bp-media-tag-done-button');
+      $I->click('.button.button.item-button.bp-secondary-action.rtmedia-action-buttons.bp-media-tag-done-button');
+      $I->wait(2);
+      
+      $I->closeTab();
+
+      $logout = new LogoutPage( $I );
+      $logout->logout();
+
 
     }
 
