@@ -4,7 +4,7 @@ use Page\Login1 as LoginPage;
 use Page\Logout as LogoutPage;
 use Page\Constants as ConstantsPage;
 
-class rtMediaPhotoTaggingCest
+class SingleMediaPhotoTagCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
