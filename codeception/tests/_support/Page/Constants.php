@@ -24,6 +24,29 @@ class Constants {
 	 public static $textField = 'puja@rtcamp.com';
 	 public static $textField1 = 'abc';
 
+	 //selectors
+	 public static $rowVisible = '.row-actions.visible';
+	 public static $mouseOver = 'li#wp-admin-bar-my-account';
+	 public static $mediaMouseOver = 'li#wp-admin-bar-my-account-media a';
+	 public static $scrollContainer = ['css' => '.rtmedia-container '];
+	 public static $privacyElement = '.rtm-album-privacy';
+	 public static $uploadTabs = '.rtm-uploader-tabs';
+	 public static $urlTab = '.rtm-url-import-tab';
+	 public static $urlinputField = '#rtmedia_url_upload_input';
+	 public static $scrollActivity = '#user-activity';
+	 public static $navAlbum = '#rtmedia-nav-item-albums';
+	 public static $itemThumbnail = '.rtmedia-item-thumbnail';
+	 public static $saveAlbum = '.rtmedia-save-album';
+	 public static $albumSubmit = 'input[name="submit"]';
+	 public static $modalLink = '.rtmedia-reveal-modal.rtmedia-modal-link';
+	 public static $albumName = '#rtmedia_album_name';
+	 public static $albumNameStr = 'album privacy test';
+	 public static $albumDescription = '#rtmedia_album_description';
+	 public static $albumDescriptionStr = 'Lorem Ipsum this is just for testing';
+	 public static $createAlbum = '#rtmedia_create_new_album';
+	 public static $popupClose = 'button.mfp-close';
+
+
 	 //Login for add-ons
 
 	 public static $userName1 = 'pooja';
@@ -39,6 +62,15 @@ class Constants {
 	 public static $startUpload = '.start-media-upload';
 	 public static $saveSettingsButtonBottom = '.rtm-button-container.bottom .rtmedia-settings-submit';
 	 public static $topSaveButton = '.rtm-button-container.top input.rtmedia-settings-submit';
+
+	 //Options
+
+	 public static $scrollAll = '#rtmedia-nav-item-all-li';
+	 public static $optionsList = '#rtm-media-options-list';
+	 public static $editOption = '.rtmedia-edit';
+	 public static $privacySelect = '#rtmedia_select_album_privacy';
+	 public static $deleteOption = '.rtmedia-delete-album';
+
 
 	 public static $uploadUI = '#rtm_show_upload_ui';
 	 public static $privacy = '#rtSelectPrivacy';
