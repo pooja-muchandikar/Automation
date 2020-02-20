@@ -45,6 +45,19 @@ class Constants {
 	 public static $albumDescriptionStr = 'Lorem Ipsum this is just for testing';
 	 public static $createAlbum = '#rtmedia_create_new_album';
 	 public static $popupClose = 'button.mfp-close';
+	 public static $tabGeneral = '#tab-rtmedia-general';
+	 public static $close = '.rtmedia-container.rtmedia-single-container span.rtm-mfp-close';
+	 public static $options = '#rtmedia-media-options';
+
+	 //Slectors for Playlist
+	 public static $addPlaylist = '.rtmedia-add-to-playlist';
+	 public static $playlistForm = '#rtmp-playlist-form';
+	 public static $playlistName = '#playlist_name';
+	 public static $playlistStr = 'Playlist';
+	 public static $playlistAdd = '.add-to-rtmp-playlist';
+	 public static $playlistPrivacy = '#rtSelect0';
+	 public static $createPlaylist = '#rtmedia_create_new_playlist';
+	 public static $rtmediaPlaylistName = '#rtmedia_playlist_name';
 
 
 	 //Login for add-ons
