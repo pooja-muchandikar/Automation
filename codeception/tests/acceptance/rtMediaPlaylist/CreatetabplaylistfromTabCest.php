@@ -29,6 +29,7 @@ class PlaylistfromTabCest
       $I->seeElement( ConstantsPage :: $createPlaylist );
       $I->click( ConstantsPage :: $createPlaylist );
       echo ".....Playlist Created!!!!.....";
+      $I->wait(2);
 
     }
 }
