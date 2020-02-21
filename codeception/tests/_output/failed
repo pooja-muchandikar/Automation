@@ -1,0 +1,3 @@
+tests/acceptance/rtMediaPlaylist/CreatertMediaPlaylistCest.php:frontpageWorks
+tests/acceptance/rtMediaPlaylist/EditPlaylistCest.php:frontpageWorks
+tests/acceptance/rtMediaPlaylist/rtMediaDeletePlaylistCest.php:frontpageWorks

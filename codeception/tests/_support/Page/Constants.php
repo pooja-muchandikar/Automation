@@ -58,6 +58,15 @@ class Constants {
 	 public static $playlistPrivacy = '#rtSelect0';
 	 public static $createPlaylist = '#rtmedia_create_new_playlist';
 	 public static $rtmediaPlaylistName = '#rtmedia_playlist_name';
+	 public static $nopopup = '.no-popup';
+	 public static $editorScroll = '.rtmedia-editor-main';
+	 public static $mediaTitle = '#media_title';
+	 public static $titleStr = 'Playlist Edit';
+	 public static $playlistDescription = '#description';
+	 public static $descriptionStr = 'Lorem Ipsum this is for testing';
+	 public static $playlistSave = 'input[type="submit"]';
+	 public static $deletePlaylist = '.rtm-delete-media';
+
 
 
 	 //Login for add-ons
@@ -83,6 +92,8 @@ class Constants {
 	 public static $editOption = '.rtmedia-edit';
 	 public static $privacySelect = '#rtmedia_select_album_privacy';
 	 public static $deleteOption = '.rtmedia-delete-album';
+	 
+
 
 
 	 public static $uploadUI = '#rtm_show_upload_ui';
