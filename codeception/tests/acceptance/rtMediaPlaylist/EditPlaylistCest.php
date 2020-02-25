@@ -9,12 +9,9 @@ class EditPlaylistCest
     public function frontpageWorks(AcceptanceTester $I)
     {
 
-      // $loginPage = new LoginPage( $I );
-      // $loginPage->loginAsAdmin();
+      $loginPage = new LoginPage( $I );
+      $loginPage->loginAsAdmin();
 
-      // $I->moveMouseOver( ConstantsPage :: $mouseOver );
-      // $I->wait(2);
-      // $I->click( ConstantsPage :: $mediaMouseOver );
       $I->amOnPage('/members/pooja/media/playlist/');
       $I->wait(2);
 

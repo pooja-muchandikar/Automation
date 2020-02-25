@@ -12,9 +12,6 @@ class DeletePlaylistCest
       $loginPage = new LoginPage( $I );
       $loginPage->loginAsAdmin();
 
-      $I->moveMouseOver( ConstantsPage :: $mouseOver );
-      $I->wait(2);
-      $I->click( ConstantsPage :: $mediaMouseOver );
       $I->amOnPage('/members/pooja/media/playlist/');
       $I->wait(2);
 
@@ -25,6 +22,8 @@ class DeletePlaylistCest
       $I->click( ConstantsPage :: $deletePlaylist );
       $I->wait(2);
       $I->acceptPopup();
+      $I->wait(2);
+      $I->click('.rtmedia-success');
 
       echo ".....Playlist Deleted Successfully!!!!.....";
 
