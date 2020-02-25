@@ -19,4 +19,8 @@ jobs:
     - name: Run test cases
       run:  php vendor/bin/codecept run acceptance --steps
       
+    - name: Codeception Action
+      uses: joelwmale/codeception-action@1.0.0
+
+      
   
