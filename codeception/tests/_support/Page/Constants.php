@@ -67,6 +67,29 @@ class Constants {
 	 public static $playlistSave = 'input[type="submit"]';
 	 public static $deletePlaylist = '.rtm-delete-media';
 
+	 //Slectors for rtMedia Ratings
+	 public static $settingsMenu = '.wp-menu-name';
+	 public static $scrolltowrapper = '.rtm-option-wrapper';
+	 public static $enableRating = 'input[name="rtmedia-options[general_enableRatings]"]';
+	 public static $ratingwidget = '.webwidget_rating_simple';
+	 public static $addrating = '.webwidget_rating_simple li:nth-child(4)';
+	 public static $closelightbox = '.rtmedia-container.rtmedia-single-container span.rtm-mfp-close';
+	 public static $addrating1 = '.rtmedia-container .rtmedia-list > li:nth-child(2)';
+	 public static $mediaList = '.rtmedia-list.rtmedia-list-media';
+	 public static $avgRating = ['css' => '.rtmedia-media-rating .rtmedia-pro-average-rating'];
+	 public static $undoRating = '.rtmedia-pro-average-rating .rtm-undo-rating';
+	 public static $listTab = ['css' => '#buddypress div.item-list-tabs'];
+	 public static $listTab1 = '.item-list-tabs';
+	 public static $itemAlbum = 'li#rtmedia-nav-item-albums-li a';
+	 public static $rtmediaContainer = ['css' => '.rtmedia-container'];
+	 public static $rtMediaRating = '.rtmedia-media-rating';
+	 public static $albumRating = '.webwidget_rating_simple li:nth-child(3)';
+	 
+
+
+
+
+
 
 
 	 //Login for add-ons
