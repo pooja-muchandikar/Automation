@@ -1,1 +1,2 @@
-tests/acceptance/rtMediaRatings/enablertMediaRatingsCest.php:frontpageWorks
+tests/acceptance/rtMediaViewCount/rtMediaViewCountCest.php:frontpageWorks
+tests/acceptance/rtMediaViewCount/enableViewCountCest.php:frontpageWorks

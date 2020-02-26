@@ -84,8 +84,11 @@ class Constants {
 	 public static $rtmediaContainer = ['css' => '.rtmedia-container'];
 	 public static $rtMediaRating = '.rtmedia-media-rating';
 	 public static $albumRating = '.webwidget_rating_simple li:nth-child(3)';
-	 
 
+	 //selectors for rtMedia View Count
+	 public static $enableViewCount = 'input[name^="rtmedia-options[general_viewcount]"]';
+	 public static $viewList = '#view_list';
+	 public static $viewpopupClose = '.rtm-media-view > close';
 
 
 
