@@ -13,9 +13,14 @@ class enableViewCountCest
       $loginPage->loginAsAdmin();
 
       $I->amOnPage( ConstantsPage ::  $rtMediaSettingsUrl );
-    //   $I->seeElement( ConstantsPage :: $enableViewCount );
-    //   $I->click( ConstantsPage :: $enableViewCount );
-    $I->click('input#rtm-form-checkbox-1');
+      $I->wait(2);
+      // $I->seeElement( ConstantsPage :: $enableViewCount );
+
+      $I->click("input[name*='viewcount']");
+
+
+      
+      // $I->click( ConstantsPage :: $enableViewCount );
       $I->wait(2);
 
       echo ".....View Count Enabled!!.....";

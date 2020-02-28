@@ -1,2 +1,1 @@
-tests/acceptance/rtMediaViewCount/rtMediaViewCountCest.php:frontpageWorks
-tests/acceptance/rtMediaViewCount/enableViewCountCest.php:frontpageWorks
+tests/acceptance/rtMediaSidebarWidgets/addSidebarGalleryCest.php:frontpageWorks

@@ -90,7 +90,14 @@ class Constants {
 	 public static $viewList = '#view_list';
 	 public static $viewpopupClose = '.rtm-media-view > close';
 
-
+	 //selectors for rtMedia Sidebar Widgets
+	 public static $appearance = '.wp-menu-image.dashicons-before.dashicons-admin-appearance';
+	 public static $widgetURL = '/wp-admin/widgets.php';
+	 public static $galleryWidget = '#widget-28_rtmediagallerywidget-__i__';
+	 public static $chooseWidget = '.widgets-chooser-actions';
+	 public static $addWidget = '.button.button-primary.widgets-chooser-add';
+	 public static $rtMediaWidget = '.rtmedia-gallery-widget';
+	 
 
 
 
