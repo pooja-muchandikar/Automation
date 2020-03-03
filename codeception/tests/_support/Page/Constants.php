@@ -2,11 +2,11 @@
 namespace Page;
 class Constants {
 	// Username and Password
-	// public static $userName = 'pooja.muchandikar';
-	// public static $password = '1100';
-
-	public static $userName = 'pooja';
+	public static $userName = 'pooja.muchandikar';
 	public static $password = '1100';
+
+	// public static $userName = 'pooja';
+	// public static $password = '1100';
 	
 	 // Login Selectors
 	 public static $wpUserNameField = 'input#user_login';
@@ -164,7 +164,32 @@ class Constants {
 	 public static $enablePlaylistCheckbox = 'input[name="rtmedia-options[general_enablePlaylist]"]';
 
 
+	 //selectors for rtMedia.io
+	 public static $alignCenter = '.wp-block-button.aligncenter';
+	 public static $menuItem = '#menu-item-149021';
+	 public static $loadMore = '#rtm-load-more';
+	 public static $usefulLinks = '#menu-useful-links';
+	 public static $menuItem1 = '#menu-item-2434396';
+	 public static $menuItem2 = '#menu-item-457582';
+	 public static $menuItem3 = '#menu-item-74452';
+	 public static $menuItem4 = '#menu-item-29708';
+	 public static $footerSocialMedia = '.footer-social-media';
+	 public static $menuItem5 = '#menu-item-2345356';
+	 public static $siteBranding = '.site-branding';
 
+	 //Logins
+	 public static $userLogin = '#user_login';
+	 public static $userLoginStr = 'automation';
+	 public static $userPass = '#user_pass';
+	 public static $userPassStr = 'automation@rtcamp';
+	 public static $userSubmit = '#wp-submit';
+
+
+	 //URLs
+	 public static $rtMediaPro = '/products/rtmedia-pro/';
+	 public static $blog = '/blog';
+	 public static $refundPolicy = '/refund-policy/';
+	 public static $wpadmin = '/wp-admin';
 	 
 }
 ?>

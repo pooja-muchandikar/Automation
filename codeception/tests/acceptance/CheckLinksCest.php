@@ -1,5 +1,7 @@
 <?php
 
+use Page\Constants as ConstantsPage;
+
 class CheckLinksCest
 {
 
@@ -7,53 +9,40 @@ class CheckLinksCest
     {
         $I->amOnPage('/');
 
-        $I->scrollTo('.wp-block-button.aligncenter');
+        $I->scrollTo( ConstantsPage :: $alignCenter );
 
-        $I->openNewTab('.wp-block-button.aligncenter');
-        $I->amOnPage('/products/rtmedia-pro/');
+        $I->openNewTab( ConstantsPage :: $alignCenter );
+        $I->amOnPage( ConstantsPage :: $rtMediaPro );
         $I->closeTab();
 
         $I->switchToPreviousTab();
-        $I->seeElement('#menu-item-149021');
-        $I->click('#menu-item-149021');
-        $I->wait(2);
+        $I->seeElement( ConstantsPage ::  $menuItem );
+        $I->click( ConstantsPage ::  $menuItem );
+        $I->scrollTo( ConstantsPage :: $loadMore );
 
-        $I->scrollTo('#rtm-load-more');
-        $I->wait(2);
-        $I->seeElement('#menu-useful-links');
-        $I->seeElement('#menu-item-2434396');
-        $I->click('#menu-item-2434396');
-        $I->amOnPage('/blog');
-        $I->wait(2);
+        $I->waitForElementVisible( ConstantsPage :: $usefulLinks, 20 );
+        $I->seeElement( ConstantsPage :: $menuItem1 );
+        $I->click( ConstantsPage :: $menuItem1 );
 
-        $I->seeElement('#menu-item-457582');
-        $I->click('#menu-item-457582');
-
-        $I->scrollTo('.wp-block-button.aligncenter');
-
-        $I->seeElement('#menu-item-74452');
-        $I->click('#menu-item-74452');
-        $I->wait(2);
-
-        $I->seeElement('#menu-item-161547');
+        $I->amOnPage( ConstantsPage :: $blog );
+        $I->waitForElementVisible( ConstantsPage :: $menuItem2, 20 );
+        $I->click( ConstantsPage :: $menuItem2 );
+        
+        $I->scrollTo( ConstantsPage :: $alignCenter );
+        $I->seeElement( ConstantsPage :: $menuItem3 );
+        $I->click( ConstantsPage :: $menuItem3 );
         
         $I->amOnPage('/');
+        $I->seeElement( ConstantsPage :: $menuItem4 );
+        $I->click( ConstantsPage :: $menuItem4 );
+        $I->scrollTo( ConstantsPage :: $footerSocialMedia );
 
-        $I->seeElement('#menu-item-29708');
-        $I->click('#menu-item-29708');
-
-        $I->scrollTo('.footer-social-media');
-
-        $I->seeElement('#menu-item-2345356');
-        $I->amOnPage('/refund-policy/');
-        $I->wait(2);
-
-        $I->seeElement('.site-branding');
-        $I->click('.site-branding');
+        $I->seeElement( ConstantsPage :: $menuItem5 );
+        $I->amOnPage( ConstantsPage :: $refundPolicy );
+        $I->waitForElementVisible( ConstantsPage :: $siteBranding, 20 );
+        $I->click( ConstantsPage :: $siteBranding );
 
         echo "..........Navigation through random pages done!!!!..........";
-
-
 
 
     }
