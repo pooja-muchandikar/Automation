@@ -3,8 +3,8 @@ modules:
     enabled:
         #- PhpBrowser:
         - WebDriver:
-            url: 'https://rtmedia.io/'
-            #url: 'https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/'
+            #url: 'https://rtmedia.io/'
+            url: 'https://rtcamp:goodwork@rtmedia-dev.rtm.rt.gw/'
             #url:  'https://poojam.dev4.rt.gw/'
             browser: chrome
             port: 9515

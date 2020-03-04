@@ -12,16 +12,16 @@ class createTicketCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
 
-        $I->amOnPage('/support');
-        $I->seeElement('#title');
-        $I->fillField('#title', 'Test ticket');
-        #$I->seeElement('#rthd-product-id');
-        $I->selectOption('select#rthd-product-id', '48246');
-        $I->scrollTo('#post_description_body');
-        $I->seeElement('#post_description_body');
-        $I->fillField('#post_description_body', 'Lorem Ipsum test ticket desctiption');
-        $I->seeElement('#submit-support-form');
-        $I->click('#submit-support-form');
+        $I->amOnPage( ConstantsPage :: $support );
+        $I->seeElement( ConstantsPage :: $ticketTitle );
+        $I->fillField( ConstantsPage :: $ticketTitle, ConstantsPage :: $ticketTitleStr );
+
+        $I->selectOption( ConstantsPage :: $selectProduct, ConstantsPage :: $selectProductValue );
+        $I->scrollTo( ConstantsPage :: $ticketDescription );
+        $I->seeElement( ConstantsPage :: $ticketDescription );
+        $I->fillField( ConstantsPage :: $ticketDescription, ConstantsPage :: $ticketDescriptionStr);
+        $I->seeElement( ConstantsPage :: $submitForm );
+        $I->click( ConstantsPage :: $submitForm );
         echo "..........Ticket Submitted..........";
     }
 }

@@ -2,7 +2,7 @@
 
 use Page\Constants as ConstantsPage;
 
-class FirstCest 
+class LoginCest 
 {
 
     public function frontpageWorks(AcceptanceTester $I)

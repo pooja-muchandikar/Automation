@@ -1,64 +1,50 @@
 <?php
 
+use Page\Constants as ConstantsPage;
+
 class newuserRegisterCheckoutCest 
 {
 
     public function registerWorks(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        // $I->seeElement('.wp-block-image');
-        // $I->seeElement('.wp-image-85666');
-        // $I->click('.wp-image-85666');
-
-        $I->seeElement('#menu-item-149021');
-        $I->click('#menu-item-149021');
+       
+        $I->seeElement( ConstantsPage :: $pageMenu );
+        $I->click( ConstantsPage :: $pageMenu );
 
 
-        $I->seeElement('#edd_purchase_116837');
-        $I->click('#edd_purchase_116837');
-        $I->seeElement('.edd_purchase_submit_wrapper ');
-        $I->click('.edd_purchase_submit_wrapper ');
+        $I->seeElement( ConstantsPage :: $eddPurchase );
+        $I->click( ConstantsPage :: $eddPurchase );
+        $I->seeElement( ConstantsPage :: $eddSubmit );
+        $I->click( ConstantsPage :: $eddSubmit );
+        
+        $I->amOnPage( ConstantsPage :: $checkout );
 
-        // $I->scrollTo('.edd_purchase_submit_wrapper');
+        $I->seeElement( ConstantsPage :: $eddEmail );
+        $I->fillField( ConstantsPage :: $eddEmail, ConstantsPage :: $eddEmailStr );
 
-        // $I->seeElement('#edd_purchase_85270');
-        // $I->click('#edd_purchase_85270');
+        $I->seeElement( ConstantsPage :: $eddFirstName );
+        $I->fillField( ConstantsPage :: $eddFirstName, ConstantsPage :: $eddFirstNameStr );
 
-        // $I->seeElement('.edd_purchase_submit_wrapper');
-        // $I->click('.edd_purchase_submit_wrapper');
+        $I->seeElement( ConstantsPage :: $eddLastName );
+        $I->fillField( ConstantsPage :: $eddLastName, ConstantsPage :: $eddLastNameStr );
 
-        // echo "..........CHECKOUT PAGE.........";
-        $I->wait(2);
+        $I->seeElement( ConstantsPage :: $eddUserLogin );
+        $I->fillField( ConstantsPage :: $eddUserLogin, ConstantsPage :: $eddUserLoginStr );
 
-        $I->amOnPage('/checkout');
+        $I->seeElement( ConstantsPage :: $eddUserPass );
+        $I->fillField( ConstantsPage :: $eddUserPass, ConstantsPage :: $eddUserPassStr );
 
-        $I->seeElement('#edd-email');
-        $I->fillField('#edd-email', 'poojatest@rtcamp.com');
+        $I->seeElement( Constantspage :: $eddUserPassConfirm );
+        $I->fillField( ConstantsPage :: $eddUserPassConfirm, ConstantsPage :: $eddUserPassConfirm );
 
-        $I->seeElement('#edd-first');
-        $I->fillField('#edd-first', 'pooja');
+        $I->click( ConstantsPage :: $eddShowTerms );
+        
+        $I->seeElement( ConstantsPage :: $eddTerms );
+        $I->click(ConstantsPage :: $eddTerms );
 
-        $I->seeElement('#edd-last');
-        $I->fillField('#edd-last', 'm');
-
-        $I->seeElement('#edd_user_login');
-        $I->fillField('#edd_user_login', 'poojatest');
-
-        $I->seeElement('#edd_user_pass');
-        $I->fillField('#edd_user_pass', 'password');
-
-        $I->seeElement('#edd_user_pass_confirm');
-        $I->fillField('#edd_user_pass_confirm', 'password');
-
-        $I->click('#edd_show_terms');
-
-        $I->wait(2);
-
-        $I->seeElement('#edd_agree_to_terms');
-        $I->click('#edd_agree_to_terms');
-
-        $I->seeElement('#edd-purchase-button');
-        $I->click('#edd-purchase-button');
+        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
+        $I->click( ConstantsPage :: $eddPurchaseButton );
 
         echo "..........Purchase History Page..........";
 
