@@ -12,22 +12,21 @@ class deleteUserCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
 
-        $I->seeElement('#menu-users');
-        $I->click('#menu-users');
+        $I->seeElement( ConstantsPage :: $userMenu );
+        $I->click( ConstantsPage :: $userMenu );
 
-        $I->seeElement('#user-search-input');
-        $I->fillField('#user-search-input', 'pooja');
+        $I->seeElement( ConstantsPage :: $userSearchInput );
+        $I->fillField( ConstantsPage :: $userSearchInput, ConstantsPage :: $userSearchInputStr );
 
-        $I->seeElement('#search-submit');
-        $I->click('#search-submit');
+        $I->seeElement( ConstantsPage :: $searchSubmit );
+        $I->click( ConstantsPage :: $searchSubmit );
 
 
-        $I->seeElement('#user-29086');
+        $I->seeElement( ConstantsPage :: $userID );
         $I->wait(2);
-        $I->moveMouseOver('#user-29086');
-        $I->seeElement('.row-actions');
-        $I->wait(2);
-        $I->seeElement('#user-29086 .submitdelete');
+        $I->moveMouseOver( ConstantsPage :: $userID );
+        $I->seeElement( ConstantsPage :: $actions );
+        $I->waitForElementVisible( ConstantsPage :: $userDeleteSubmitButton, 20 );
         $I->click('#user-29086 .submitdelete');   
         $I->wait(2);
 

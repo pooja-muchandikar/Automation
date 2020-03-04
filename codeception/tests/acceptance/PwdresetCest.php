@@ -1,20 +1,19 @@
 <?php
 
+use Page\Constants as ConstantsPage;
+
 class PwdresetCest 
 {
 
     public function registerWorks(AcceptanceTester $I)
     {
-        $I->amOnPage('/my-account/');
-        $I->amOnPage('/wp-login.php?action=lostpassword');
-        if($I->seeElement('#user_login')){
-            $I->fillField('#user_login');
-            $I->seeElement('#wp-submit');
-            $I->click('#wp-submit');
-        } else {
-            return false;
-        }     
-
+        $I->amOnPage( '/' );
+        $I->amOnPage( ConstantsPage :: $myAccount );
+        $I->amOnPage( ConstantsPage :: $forgotPassword );
+        $I->seeElement( ConstantsPage :: $userLogin );
+        $I->fillField( ConstantsPage :: $userLogin, ConstantsPage :: $userName );
+        $I->seeElement( ConstantsPage :: $userSubmit );
+        $I->click( ConstantsPage :: $userSubmit );
         
     }
 }

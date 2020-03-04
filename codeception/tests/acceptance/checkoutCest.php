@@ -11,31 +11,30 @@ class checkoutCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
 
-        $I->amOnPage('/my-account');
+        $I->amOnPage( ConstantsPage :: $myAccount );
 
-        $I->seeElement('#menu-item-149021');
-        $I->click('#menu-item-149021');
+        $I->seeElement( ConstantsPage :: $checkoutMenu );
+        $I->click( ConstantsPage :: $checkoutMenu );
 
-        $I->seeElement('#edd_purchase_116837');
-        $I->click('#edd_purchase_116837');
-        $I->seeElement('.edd_purchase_submit_wrapper ');
-        $I->click('.edd_purchase_submit_wrapper ');
+        $I->seeElement( ConstantsPage :: $eddPurchase );
+        $I->click( ConstantsPage :: $eddPurchase );
+        $I->seeElement( ConstantsPage :: $eddSubmit );
+        $I->click( ConstantsPage :: $eddSubmit );
 
         echo "..........CHECKOUT PAGE.........";
 
-        #$I->scrollTo('#edd_show_terms');
-        $I->seeElement('#edd_agree_to_terms');
-        $I->click('#edd_agree_to_terms');
-        $I->seeElement('#edd-purchase-button');
-        $I->click('#edd-purchase-button');
+        $I->seeElement( ConstantsPage :: $eddTerms );
+        $I->click( ConstantsPage :: $eddTerms );
+        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
+        $I->click( ConstantsPage :: $eddPurchaseButton );
 
         echo "..........Purchase History Page........";
 
-        $I->amOnPage('/checkout/purchase-confirmation/');
+        $I->amOnPage( ConstantsPage :: $purchaseHistory );
 
-        $I->click('.user-acount.shrink');
-        $I->seeElement('.edd_download_file');
-        $I->click('.edd_download_file');
+        $I->click( ConstantsPage :: $userAccount );
+        $I->seeElement( ConstantsPage :: $eddDownloadZip );
+        $I->click( ConstantsPage :: $eddDownloadZip );
         
         echo ".........ZIP Downloaded Successfully..........";
     }
