@@ -247,8 +247,6 @@ class Constants {
 	 public static $eddUserPassConfirmStr = 'automationtest';
 	 public static $eddShowTerms = '#edd_show_terms';
 
-
-
 	 //Ticket creation selectors
 	 public static $ticketTitle = '#title';
 	 public static $ticketTitleStr = 'Test ticket creation';
@@ -268,6 +266,15 @@ class Constants {
 	 public static $actions = '.row-actions';
 	 public static $userDeleteSubmitButton = '#user-29092 .submitdelete';
 
+	 //Single Page Checkout 
+	 public static $itemMenu = '#menu-item-2512333';
+	 public static $wpBlockImage = '.wp-block-image';
+	 public static $wpImage = '.wp-image-114844';
+
+	 //Transcoder checkout
+	 public static $itemMenu1 = '#menu-item-163176';
+	 public static $subscribePlanButton = '.wp-block-button.aligncenter.transcoder-banner-button.subscribe-plan';
+	 public static $tryNowButton = '.wp-block-button.transcoder-try-now-button';
 
 
 

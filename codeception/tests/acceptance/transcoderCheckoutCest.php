@@ -12,34 +12,28 @@ class transcoderCheckoutCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
 
-        $I->amOnPage('/my-account');
+        $I->amOnPage( ConstantsPage :: $myAccount );
        
-        $I->seeElement('#menu-item-163176');
-        $I->click('#menu-item-163176');
+        $I->seeElement( ConstantsPage :: $itemMenu1 );
+        $I->click( ConstantsPage :: $itemMenu1 );
 
+        $I->waitForElementVisible( ConstantsPage :: $subscribePlanButton, 20 );
+        $I->click( ConstantsPage :: $subscribePlanButton );
+
+        $I->seeElement( ConstantsPage :: $tryNowButton );
         $I->wait(2);
+        $I->click( ConstantsPage :: $tryNowButton );
 
-        $I->seeElement('.wp-block-button.aligncenter.transcoder-banner-button.subscribe-plan');
-        $I->click('.wp-block-button.aligncenter.transcoder-banner-button.subscribe-plan');
-
-        $I->wait(2);
-
-        $I->seeElement('.wp-block-button.transcoder-try-now-button');
-        $I->click('.wp-block-button.transcoder-try-now-button');
-
-        $I->wait(2);
-
-         #$I->scrollTo('#edd_show_terms');
-         $I->seeElement('#edd_agree_to_terms');
-         $I->click('#edd_agree_to_terms');
-         $I->seeElement('#edd-purchase-button');
-         $I->click('#edd-purchase-button');
+        $I->seeElement( ConstantsPage ::  $eddTerms );
+        $I->click( ConstantsPage ::  $eddTerms );
+        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
+        $I->click( ConstantsPage :: $eddPurchaseButton );
  
-         echo "..........Purchase History Page........";
+        echo "..........Purchase History Page........";
  
-         $I->amOnPage('/checkout/purchase-confirmation/');
+        $I->amOnPage( ConstantsPage :: $purchaseHistory );
  
-         $I->click('.user-acount.shrink');
+        $I->click( ConstantsPage :: $userAccount );
          
          echo "..........Transcoder Free plugin..........";
     }
