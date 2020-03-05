@@ -178,6 +178,8 @@ class Constants {
 	 public static $siteBranding = '.site-branding';
 	 public static $headerMenu = '#header-menu';
 	 public static $formWrapper = '#gform_wrapper_69';
+	 public static $lostPasswordLink = '.rt-login-form a';
+	 public static $userRegisterLink = 'a[href*="register"]';
 
 	 //Logins
 	 public static $userLogin = '#user_login';

@@ -5,7 +5,7 @@ use Page\Logout as LogoutPage;
 use Page\Constants as ConstantsPage;
 #use \Codeception\Util\Locator;
 
-class PageCest
+class createPageCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
@@ -26,6 +26,8 @@ class PageCest
         $I->wait(1);
         $logout = new LogoutPage( $I );
         $logout->logout();
+
+        echo ".....Page Created Successfully!.....";
     
     }
 }

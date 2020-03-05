@@ -6,7 +6,7 @@ use Page\Constants as ConstantsPage;
 #use \Codeception\Step\Argument\PasswordArgument;
 use \Codeception\Util\Locator;
 
-class PostCest
+class createPostCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
@@ -26,6 +26,8 @@ class PostCest
         $I->wait(2);
         $logout = new LogoutPage( $I );
         $logout->logout();
+
+        echo ".....Post Created Successfully!.....";
 
 
     }
