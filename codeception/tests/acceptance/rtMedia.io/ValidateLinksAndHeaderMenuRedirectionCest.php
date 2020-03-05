@@ -2,7 +2,7 @@
 
 use Page\Constants as ConstantsPage;
 
-class CheckLinksCest
+class ValidateLinksAndHeaderMenuRedirectionCest
 {
 
     public function registerWorks(AcceptanceTester $I)

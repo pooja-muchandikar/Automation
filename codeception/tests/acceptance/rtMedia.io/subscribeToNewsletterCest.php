@@ -3,7 +3,7 @@
 use Page\Constants as ConstantsPage;
 use \Codeception\Util\Locator;
 
-class ValidateformCest
+class subscribeToNewsletterCest
 {
     public function frontpageworks(AcceptanceTester $I)
     {
@@ -18,7 +18,7 @@ class ValidateformCest
 
         $I->click( ConstantsPage::$validateField );
 
-        echo ".......Validation Done!!!.....";
+        echo "....... Thank You for subscribing to the Newsletter!!!.....";
 
 
 

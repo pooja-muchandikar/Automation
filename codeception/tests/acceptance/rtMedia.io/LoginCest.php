@@ -9,13 +9,14 @@ class LoginCest
     {
         
         $I->amOnPage( ConstantsPage :: $wpadmin );
-        $I->pause();
-        $I->seeElement( ConstantsPage :: $userLogin );
+        $I->waitForElementVisible( ConstantsPage :: $userLogin, 20 );
         $I->fillField( ConstantsPage :: $userLogin, ConstantsPage :: $userLoginStr );
         $I->seeElement( ConstantsPage :: $userPass );
         $I->fillField( ConstantsPage :: $userPass, ConstantsPage :: $userPassStr);
         $I->seeElement( ConstantsPage :: $userSubmit );
         $I->click( ConstantsPage :: $userSubmit );
+
+        echo ".....User Logged-in Successfully!!!.....";
 
     }
 }

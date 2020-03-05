@@ -22,7 +22,15 @@ class createTicketCest
         $I->fillField( ConstantsPage :: $ticketDescription, ConstantsPage :: $ticketDescriptionStr);
         $I->seeElement( ConstantsPage :: $submitForm );
         $I->click( ConstantsPage :: $submitForm );
-        echo "..........Ticket Submitted..........";
+
+        echo ".....Ticket has been submitted. We will get back to you for your query soon!!.....";
+
+        $I->waitForElementVisible( ConstantsPage :: $userAccount, 20 );
+        $I->click( ConstantsPage :: $userAccount );
+
+        $I->seeElement( '.tab-link a');
+
+
     }
 }
 
