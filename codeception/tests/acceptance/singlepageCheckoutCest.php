@@ -11,35 +11,35 @@ class singlepageCheckoutCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
 
-        $I->amOnPage('/my-account');
+        $I->amOnPage( ConstantsPage :: $myAccount );
 
-        $I->seeElement('#menu-item-2512333');
-        $I->click('#menu-item-2512333');
+        $I->seeElement( ConstantsPage :: $itemMenu );
+        $I->click( ConstantsPage :: $itemMenu );
 
-        $I->scrollTo('.wp-block-image');
-        $I->seeElement('.wp-block-image');
-        $I->seeElement('.wp-image-114844');
-        $I->click('.wp-image-114844');
+        $I->scrollTo( ConstantsPage :: $wpBlockImage );
+        $I->seeElement( ConstantsPage :: $wpBlockImage );
+        $I->seeElement( ConstantsPage :: $wpImage );
+        $I->click( ConstantsPage :: $wpImage );
 
         echo ".........Theme Checkout Flow.........";
 
         echo ".....Add to Cart......";
-        $I->seeElement('.edd_purchase_submit_wrapper');
-        $I->click('.edd_purchase_submit_wrapper');
+        $I->seeElement( ConstantsPage :: $eddSubmit );
+        $I->click( ConstantsPage :: $eddSubmit );
 
         echo ".....Checkout..... ";
-        $I->seeElement('.edd_purchase_submit_wrapper');
-        $I->click('.edd_purchase_submit_wrapper');
-        $I->amOnPage('/checkout');
+        $I->seeElement( ConstantsPage :: $eddSubmit );
+        $I->click( ConstantsPage :: $eddSubmit );
+        $I->amOnPage( ConstantsPage :: $checkout );
 
-        $I->seeElement('#edd_agree_to_terms');
-        $I->click('#edd_agree_to_terms');
-        $I->seeElement('#edd-purchase-button');
-        $I->click('#edd-purchase-button');
+        $I->seeElement( ConstantsPage :: $eddTerms );
+        $I->click( ConstantsPage :: $eddTerms );
+        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
+        $I->click( ConstantsPage :: $eddPurchaseButton );
 
         echo "..........Purchase History Page........";
 
-        $I->amOnPage('/checkout/purchase-confirmation/');     
+        $I->amOnPage( ConstantsPage :: $purchaseHistory );     
 
 
 
