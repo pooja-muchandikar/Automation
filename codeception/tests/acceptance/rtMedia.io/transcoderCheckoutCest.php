@@ -14,8 +14,8 @@ class transcoderCheckoutCest
 
         $I->amOnPage( ConstantsPage :: $myAccount );
        
-        $I->seeElement( ConstantsPage :: $itemMenu1 );
-        $I->click( ConstantsPage :: $itemMenu1 );
+        $I->seeElement( ConstantsPage :: $transcoderMenuLink );
+        $I->click( ConstantsPage :: $transcoderMenuLink );
 
         $I->waitForElementVisible( ConstantsPage :: $subscribePlanButton, 20 );
         $I->click( ConstantsPage :: $subscribePlanButton );
@@ -34,8 +34,8 @@ class transcoderCheckoutCest
         $I->amOnPage( ConstantsPage :: $purchaseHistory );
  
         $I->click( ConstantsPage :: $userAccount );
-         
-         echo "..........Transcoder Free plugin..........";
+
+        echo ".....Transcoder Product Purchased Successfully!!.....";
     }
 }
 

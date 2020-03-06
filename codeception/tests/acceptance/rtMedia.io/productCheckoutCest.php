@@ -4,7 +4,7 @@ use Page\Login as LoginPage;
 use Page\Constants as ConstantsPage;
 #use \Codeception\Util\Locator;
 
-class checkoutCest
+class themeCheckoutFromThemesListingPageCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
@@ -31,6 +31,8 @@ class checkoutCest
         echo "..........Purchase History Page........";
 
         $I->amOnPage( ConstantsPage :: $purchaseHistory );
+
+        echo "..........Product Checkout Done Successfully!........";
 
         $I->click( ConstantsPage :: $userAccount );
         $I->seeElement( ConstantsPage :: $eddDownloadZip );

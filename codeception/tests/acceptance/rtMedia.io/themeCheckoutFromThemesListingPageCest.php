@@ -13,8 +13,8 @@ class singlepageCheckoutCest
 
         $I->amOnPage( ConstantsPage :: $myAccount );
 
-        $I->seeElement( ConstantsPage :: $itemMenu );
-        $I->click( ConstantsPage :: $itemMenu );
+        $I->seeElement( ConstantsPage :: $themesMenuLink  );
+        $I->click( ConstantsPage :: $themesMenuLink );
 
         $I->scrollTo( ConstantsPage :: $wpBlockImage );
         $I->seeElement( ConstantsPage :: $wpBlockImage );
@@ -37,9 +37,9 @@ class singlepageCheckoutCest
         $I->seeElement( ConstantsPage :: $eddPurchaseButton );
         $I->click( ConstantsPage :: $eddPurchaseButton );
 
-        echo "..........Purchase History Page........";
-
-        $I->amOnPage( ConstantsPage :: $purchaseHistory );     
+        $I->amOnPage( ConstantsPage :: $purchaseHistory );   
+        
+        echo ".....Theme Purchase From Themes Listing Page Done Successfully!!.....";
 
 
 
