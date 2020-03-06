@@ -2,7 +2,7 @@
 
 use Page\Constants as ConstantsPage;
 
-class newuserRegisterCheckoutCest 
+class productCheckoutByRegistratingNewUserCest 
 {
 
     public function registerWorks(AcceptanceTester $I)
@@ -41,15 +41,13 @@ class newuserRegisterCheckoutCest
         $I->click( ConstantsPage :: $eddShowTerms );
         
         $I->seeElement( ConstantsPage :: $eddTerms );
+        $I->wait(2);
         $I->click(ConstantsPage :: $eddTerms );
 
         $I->seeElement( ConstantsPage :: $eddPurchaseButton );
         $I->click( ConstantsPage :: $eddPurchaseButton );
 
-        echo "..........Purchase History Page..........";
-
-        $I->wait(2);
-
+        echo ".....User Registration With Product Purchase Done Successfully!!..... ";
         
   
     }

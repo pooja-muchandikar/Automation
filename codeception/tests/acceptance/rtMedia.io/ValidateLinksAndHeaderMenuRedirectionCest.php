@@ -16,28 +16,28 @@ class ValidateLinksAndHeaderMenuRedirectionCest
         $I->closeTab();
 
         $I->switchToPreviousTab();
-        $I->seeElement( ConstantsPage ::  $menuItem );
-        $I->click( ConstantsPage ::  $menuItem );
+        $I->seeElement( ConstantsPage ::  $addonsMenuLink );
+        $I->click( ConstantsPage ::  $addonsMenuLink );
         $I->scrollTo( ConstantsPage :: $loadMore );
 
         $I->waitForElementVisible( ConstantsPage :: $usefulLinks, 20 );
-        $I->seeElement( ConstantsPage :: $menuItem1 );
-        $I->click( ConstantsPage :: $menuItem1 );
+        $I->seeElement( ConstantsPage :: $footerBlogLink );
+        $I->click( ConstantsPage :: $footerBlogLink );
 
         $I->amOnPage( ConstantsPage :: $blog );
-        $I->waitForElementVisible( ConstantsPage :: $menuItem2, 20 );
-        $I->click( ConstantsPage :: $menuItem2 );
+        $I->waitForElementVisible( ConstantsPage :: $amazonS3MenuLink, 20 );
+        $I->click( ConstantsPage :: $amazonS3MenuLink );
         
         $I->scrollTo( ConstantsPage :: $alignCenter );
-        $I->seeElement( ConstantsPage :: $menuItem3 );
-        $I->click( ConstantsPage :: $menuItem3 );
+        $I->seeElement( ConstantsPage :: $footerProductsLink );
+        $I->click( ConstantsPage :: $footerProductsLink );
         
         $I->amOnPage('/');
-        $I->seeElement( ConstantsPage :: $menuItem4 );
-        $I->click( ConstantsPage :: $menuItem4 );
+        $I->seeElement( ConstantsPage :: $footerSupportLink );
+        $I->click( ConstantsPage :: $footerSupportLink );
         $I->scrollTo( ConstantsPage :: $footerSocialMedia );
 
-        $I->seeElement( ConstantsPage :: $menuItem5 );
+        $I->seeElement( ConstantsPage ::  $footerRefundPolicyLink );
         $I->amOnPage( ConstantsPage :: $refundPolicy );
         $I->waitForElementVisible( ConstantsPage :: $siteBranding, 20 );
         $I->click( ConstantsPage :: $siteBranding );

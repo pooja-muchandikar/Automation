@@ -166,20 +166,21 @@ class Constants {
 
 	 //selectors for rtMedia.io
 	 public static $alignCenter = '.wp-block-button.aligncenter';
-	 public static $menuItem = '#menu-item-149021';
+	 public static $addonsMenuLink = '#menu-item-149021';
 	 public static $loadMore = '#rtm-load-more';
 	 public static $usefulLinks = '#menu-useful-links';
-	 public static $menuItem1 = '#menu-item-2434396';
-	 public static $menuItem2 = '#menu-item-457582';
-	 public static $menuItem3 = '#menu-item-74452';
-	 public static $menuItem4 = '#menu-item-29708';
+	 public static $footerBlogLink = '#menu-item-2434396'; 
+	 public static $amazonS3MenuLink = '#menu-item-457582';
+	 public static $footerProductsLink = '#menu-item-74452';
+	 public static $footerSupportLink = '#menu-item-29708';
 	 public static $footerSocialMedia = '.footer-social-media';
-	 public static $menuItem5 = '#menu-item-2345356';
+	 public static $footerRefundPolicyLink = '#menu-item-2345356';
 	 public static $siteBranding = '.site-branding';
 	 public static $headerMenu = '#header-menu';
 	 public static $formWrapper = '#gform_wrapper_69';
 	 public static $lostPasswordLink = '.rt-login-form a';
-	 public static $userRegisterLink = 'a[href*="register"]';
+	//  public static $userRegisterLink = 'a[href*="register"]';
+	public static $userRegisterLink = 'a.rtb-form-register';
 
 	 //Logins
 	 public static $userLogin = '#user_login';
@@ -248,6 +249,7 @@ class Constants {
 	 public static $eddUserPassConfirm = '#edd_user_pass_confirm';
 	 public static $eddUserPassConfirmStr = 'automationtest';
 	 public static $eddShowTerms = '#edd_show_terms';
+	 public static $userAccountSupportTab = "jQuery('#support a').trigger('click');";
 
 	 //Ticket creation selectors
 	 public static $ticketTitle = '#title';
@@ -269,12 +271,12 @@ class Constants {
 	 public static $userDeleteSubmitButton = '#user-29092 .submitdelete';
 
 	 //Single Page Checkout 
-	 public static $itemMenu = '#menu-item-2512333';
+	 public static $themesMenuLink = '#menu-item-2512333';
 	 public static $wpBlockImage = '.wp-block-image';
 	 public static $wpImage = '.wp-image-114844';
 
 	 //Transcoder checkout
-	 public static $itemMenu1 = '#menu-item-163176';
+	 public static $transcoderMenuLink = '#menu-item-163176';
 	 public static $subscribePlanButton = '.wp-block-button.aligncenter.transcoder-banner-button.subscribe-plan';
 	 public static $tryNowButton = '.wp-block-button.transcoder-try-now-button';
 
