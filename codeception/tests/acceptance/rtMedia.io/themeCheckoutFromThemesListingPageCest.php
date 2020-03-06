@@ -4,7 +4,7 @@ use Page\Login as LoginPage;
 use Page\Constants as ConstantsPage;
 #use \Codeception\Util\Locator;
 
-class singlepageCheckoutCest
+class themeCheckoutFromThemesListingPageCest
 {
     public function frontpageWorks(AcceptanceTester $I)
     {
