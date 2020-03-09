@@ -181,15 +181,16 @@ class Constants {
 	 public static $lostPasswordLink = '.rt-login-form a';
 	//  public static $userRegisterLink = 'a[href*="register"]';
 	public static $userRegisterLink = 'a.rtb-form-register';
+	public static $adminMenu = '#adminmenumain';
 
 	 //Logins
 	 public static $userLogin = '#user_login';
 	 public static $userLoginStr = 'automation';
 	 public static $userPass = '#user_pass';
-	 public static $userPassStr = 'automation@rtcamp';
+	 public static $userPassStr = 'password@rtcamp';
 	 public static $userSubmit = '#wp-submit';
 	 public static $userName = 'automationtest@rtcamp.com';
-	 public static $password = 'automation';
+	 public static $password = 'password@rtcamp';
 	 public static $newUserStr = 'automation1';
 	 public static $newUserEmail = '#user_email';
 	 public static $newUserEmailStr = 'automation1@rtcamp.com';

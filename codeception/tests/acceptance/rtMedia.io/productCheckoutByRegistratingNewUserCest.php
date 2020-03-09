@@ -9,42 +9,43 @@ class productCheckoutByRegistratingNewUserCest
     {
         $I->amOnPage('/');
        
-        $I->seeElement( ConstantsPage :: $pageMenu );
+        $I->waitForElementVisible( ConstantsPage :: $pageMenu, 20 );
         $I->click( ConstantsPage :: $pageMenu );
 
 
-        $I->seeElement( ConstantsPage :: $eddPurchase );
+        $I->waitForElementVisible( ConstantsPage :: $eddPurchase, 20 );
         $I->click( ConstantsPage :: $eddPurchase );
-        $I->seeElement( ConstantsPage :: $eddSubmit );
+
+        $I->waitForElementVisible( ConstantsPage :: $eddSubmit, 20 );
         $I->click( ConstantsPage :: $eddSubmit );
         
         $I->amOnPage( ConstantsPage :: $checkout );
 
-        $I->seeElement( ConstantsPage :: $eddEmail );
+        $I->waitForElementVisible( ConstantsPage :: $eddEmail, 20 );
         $I->fillField( ConstantsPage :: $eddEmail, ConstantsPage :: $eddEmailStr );
 
-        $I->seeElement( ConstantsPage :: $eddFirstName );
+        $I->waitForElementVisible( ConstantsPage :: $eddFirstName, 20 );
         $I->fillField( ConstantsPage :: $eddFirstName, ConstantsPage :: $eddFirstNameStr );
 
-        $I->seeElement( ConstantsPage :: $eddLastName );
+        $I->waitForElementVisible( ConstantsPage :: $eddLastName, 20 );
         $I->fillField( ConstantsPage :: $eddLastName, ConstantsPage :: $eddLastNameStr );
 
-        $I->seeElement( ConstantsPage :: $eddUserLogin );
+        $I->waitForElementVisible( ConstantsPage :: $eddUserLogin, 20 );
         $I->fillField( ConstantsPage :: $eddUserLogin, ConstantsPage :: $eddUserLoginStr );
 
-        $I->seeElement( ConstantsPage :: $eddUserPass );
+        $I->waitForElementVisible( ConstantsPage :: $eddUserPass, 20 );
         $I->fillField( ConstantsPage :: $eddUserPass, ConstantsPage :: $eddUserPassStr );
 
-        $I->seeElement( Constantspage :: $eddUserPassConfirm );
+        $I->waitForElementVisible( Constantspage :: $eddUserPassConfirm, 20 );
         $I->fillField( ConstantsPage :: $eddUserPassConfirm, ConstantsPage :: $eddUserPassConfirm );
 
         $I->click( ConstantsPage :: $eddShowTerms );
         
-        $I->seeElement( ConstantsPage :: $eddTerms );
+        $I->waitForElementVisible( ConstantsPage :: $eddTerms, 20 );
         $I->wait(2);
         $I->click(ConstantsPage :: $eddTerms );
 
-        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
+        $I->waitForElementVisible( ConstantsPage :: $eddPurchaseButton, 20 );
         $I->click( ConstantsPage :: $eddPurchaseButton );
 
         echo ".....User Registration With Product Purchase Done Successfully!!..... ";

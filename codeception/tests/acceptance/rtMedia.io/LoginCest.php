@@ -16,6 +16,8 @@ class LoginCest
         $I->seeElement( ConstantsPage :: $userSubmit );
         $I->click( ConstantsPage :: $userSubmit );
 
+        $I->waitForElementVisible( ConstantsPage :: $adminMenu, 20);
+
         echo ".....User Logged-in Successfully!!!.....";
 
     }
