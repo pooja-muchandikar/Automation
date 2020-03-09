@@ -13,9 +13,10 @@ class passwordResetCest
         $I->waitForElementVisible( ConstantsPage :: $lostPasswordLink, 20 );
         $I->click( ConstantsPage :: $lostPasswordLink );
         // $I->amOnPage( ConstantsPage :: $forgotPassword );
-        $I->seeElement( ConstantsPage :: $userLogin );
+        $I->waitForElementVisible( ConstantsPage :: $userLogin, 20 );
         $I->fillField( ConstantsPage :: $userLogin, ConstantsPage :: $userName );
-        $I->seeElement( ConstantsPage :: $userSubmit );
+
+        $I->waitForElementVisible( ConstantsPage :: $userSubmit, 20 );
         $I->click( ConstantsPage :: $userSubmit );
 
         echo ".....Password Reset Link Sent Successfully.....";

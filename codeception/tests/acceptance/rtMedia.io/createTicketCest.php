@@ -13,14 +13,16 @@ class createTicketCest
         $loginPage->loginAsAdmin();
 
         $I->amOnPage( ConstantsPage :: $support );
-        $I->seeElement( ConstantsPage :: $ticketTitle );
+        $I->waitForElementVisible( ConstantsPage :: $ticketTitle, 20 );
         $I->fillField( ConstantsPage :: $ticketTitle, ConstantsPage :: $ticketTitleStr );
 
         $I->selectOption( ConstantsPage :: $selectProduct, ConstantsPage :: $selectProductValue );
         $I->scrollTo( ConstantsPage :: $ticketDescription );
-        $I->seeElement( ConstantsPage :: $ticketDescription );
+
+        $I->waitForElementVisible( ConstantsPage :: $ticketDescription, 20 );
         $I->fillField( ConstantsPage :: $ticketDescription, ConstantsPage :: $ticketDescriptionStr);
-        $I->seeElement( ConstantsPage :: $submitForm );
+        
+        $I->waitForElementVisible( ConstantsPage :: $submitForm, 20 );
         $I->click( ConstantsPage :: $submitForm );
 
         echo ".....Ticket has been submitted. We will get back to you for your query soon!!.....";

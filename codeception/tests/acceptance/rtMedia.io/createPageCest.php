@@ -21,13 +21,16 @@ class createPageCest
         $I->fillField( ConstantsPage :: $postTitle, ConstantsPage :: $postTitleStr );
         $I->waitForElementVisible( ConstantsPage :: $postPublish, 20 );
         $I->click( ConstantsPage :: $postPublish );
-        $I->seeElement( ConstantsPage :: $publishButton );
+
+        $I->waitForElementVisible( ConstantsPage :: $publishButton, 20 );
         $I->click( ConstantsPage :: $publishButton );
         $I->wait(1);
+
+        echo ".....Page Created Successfully!.....";
+
         $logout = new LogoutPage( $I );
         $logout->logout();
 
-        echo ".....Page Created Successfully!.....";
     
     }
 }

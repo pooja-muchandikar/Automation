@@ -21,13 +21,15 @@ class createPostCest
         $I->fillField( ConstantsPage :: $postTitle, ConstantsPage :: $postTitleStr);
         $I->waitForElementVisible( ConstantsPage :: $postPublish, 20 );
         $I->click( ConstantsPage :: $postPublish );
-        $I->seeElement( ConstantsPage :: $publishButton );
+
+        $I->waitForElementVisible( ConstantsPage :: $publishButton, 20 );
         $I->click( ConstantsPage :: $publishButton );
         $I->wait(2);
-        $logout = new LogoutPage( $I );
-        $logout->logout();
 
         echo ".....Post Created Successfully!.....";
+
+        $logout = new LogoutPage( $I );
+        $logout->logout();
 
 
     }
