@@ -2,7 +2,8 @@
 
 use Page\Login as LoginPage;
 use Page\Constants as ConstantsPage;
-#use \Codeception\Util\Locator;
+use Page\eddFields as eddFieldsPage;
+
 
 class themeCheckoutFromThemesListingPageCest
 {
@@ -32,14 +33,12 @@ class themeCheckoutFromThemesListingPageCest
         $I->click( ConstantsPage :: $eddSubmit );
         $I->amOnPage( ConstantsPage :: $checkout );
 
-        $I->seeElement( ConstantsPage :: $eddTerms );
-        $I->click( ConstantsPage :: $eddTerms );
-        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
-        $I->click( ConstantsPage :: $eddPurchaseButton );
+        $eddVariables = new eddFieldsPage( $I );
+        $eddVariables->eddVariables();
 
-        $I->amOnPage( ConstantsPage :: $purchaseHistory );   
-        
-        echo ".....Theme Purchase From Themes Listing Page Done Successfully!!.....";
+        $I->waitForElementVisible( ConstantsPage :: $eddPurchaseReceipt, 20 );
+       
+        echo nl2br(".....Theme Purchase From Themes Listing Page Done Successfully!!.....");
 
 
 
