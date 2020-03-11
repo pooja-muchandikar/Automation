@@ -2,6 +2,8 @@
 
 use Page\Login as LoginPage;
 use Page\Constants as ConstantsPage;
+use Page\eddFields as eddFieldsPage;
+
 
 class transcoderCheckoutCest
 {
@@ -24,18 +26,14 @@ class transcoderCheckoutCest
         $I->wait(2);
         $I->click( ConstantsPage :: $tryNowButton );
 
-        $I->seeElement( ConstantsPage ::  $eddTerms );
-        $I->click( ConstantsPage ::  $eddTerms );
-        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
-        $I->click( ConstantsPage :: $eddPurchaseButton );
+        $eddVariables = new eddFieldsPage( $I );
+        $eddVariables->eddVariables();
  
-        echo "..........Purchase History Page........";
- 
-        $I->amOnPage( ConstantsPage :: $purchaseHistory );
- 
+        $I->waitForElementVisible( ConstantsPage :: $eddPurchaseReceipt, 20 );
+        echo ".....Transcoder Product Purchased Successfully!!.....";
+
         $I->click( ConstantsPage :: $userAccount );
 
-        echo ".....Transcoder Product Purchased Successfully!!.....";
     }
 }
 

@@ -1,6 +1,8 @@
 <?php
 
 use Page\Constants as ConstantsPage;
+use Page\eddFields as eddFieldsPage;
+
 
 class productCheckoutByRegistratingNewUserCest 
 {
@@ -37,18 +39,15 @@ class productCheckoutByRegistratingNewUserCest
         $I->fillField( ConstantsPage :: $eddUserPass, ConstantsPage :: $eddUserPassStr );
 
         $I->waitForElementVisible( Constantspage :: $eddUserPassConfirm, 20 );
-        $I->fillField( ConstantsPage :: $eddUserPassConfirm, ConstantsPage :: $eddUserPassConfirm );
-
+        $I->fillField( ConstantsPage :: $eddUserPassConfirm, ConstantsPage :: $eddUserPassConfirmStr );
         $I->click( ConstantsPage :: $eddShowTerms );
-        
-        $I->waitForElementVisible( ConstantsPage :: $eddTerms, 20 );
-        $I->wait(2);
-        $I->click(ConstantsPage :: $eddTerms );
 
-        $I->waitForElementVisible( ConstantsPage :: $eddPurchaseButton, 20 );
-        $I->click( ConstantsPage :: $eddPurchaseButton );
+        $eddVariables = new eddFieldsPage( $I );
+        $eddVariables->eddVariables();
 
-        echo ".....User Registration With Product Purchase Done Successfully!!..... ";
+        $I->waitForElementVisible( ConstantsPage :: $eddPurchaseReceipt, 20 );
+
+        echo nl2br(".....User Registration With Product Purchase Done Successfully!!..... ");
         
   
     }

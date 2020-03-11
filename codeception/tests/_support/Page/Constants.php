@@ -280,6 +280,8 @@ class Constants {
 	 public static $transcoderMenuLink = '#menu-item-163176';
 	 public static $subscribePlanButton = '.wp-block-button.aligncenter.transcoder-banner-button.subscribe-plan';
 	 public static $tryNowButton = '.wp-block-button.transcoder-try-now-button';
+	 public static $eddPurchaseReceipt = '#edd_purchase_receipt';
+	 
 
 
 

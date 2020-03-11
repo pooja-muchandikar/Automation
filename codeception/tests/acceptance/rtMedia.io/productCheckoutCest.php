@@ -2,7 +2,8 @@
 
 use Page\Login as LoginPage;
 use Page\Constants as ConstantsPage;
-#use \Codeception\Util\Locator;
+use Page\eddFields as eddFieldsPage;
+
 
 class productCheckoutCest
 {
@@ -23,22 +24,19 @@ class productCheckoutCest
 
         echo "..........CHECKOUT PAGE.........";
 
-        $I->seeElement( ConstantsPage :: $eddTerms );
-        $I->click( ConstantsPage :: $eddTerms );
-        $I->seeElement( ConstantsPage :: $eddPurchaseButton );
-        $I->click( ConstantsPage :: $eddPurchaseButton );
 
-        echo "..........Purchase History Page........";
+        $eddVariables = new eddFieldsPage( $I );
+        $eddVariables->eddVariables();
 
-        $I->amOnPage( ConstantsPage :: $purchaseHistory );
+        $I->waitForElementVisible( ConstantsPage :: $eddPurchaseReceipt, 20 );
 
-        echo "..........Product Checkout Done Successfully!........";
+        echo nl2br("..........Product Checkout Done Successfully!........");
 
         $I->click( ConstantsPage :: $userAccount );
-        $I->seeElement( ConstantsPage :: $eddDownloadZip );
+        $I->waitForElementVisible( ConstantsPage :: $eddDownloadZip, 20 );
         $I->click( ConstantsPage :: $eddDownloadZip );
         
-        echo ".........ZIP Downloaded Successfully..........";
+        echo ".........Product ZIP Downloaded Successfully..........";
     }
 }
 
