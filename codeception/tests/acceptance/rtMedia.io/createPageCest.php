@@ -12,13 +12,15 @@ class createPageCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
         
-        $I->seeElement( ConstantsPage :: $menuPages );
+        $I->waitForElementVisible( ConstantsPage :: $menuPages, 20 );
         $I->click( ConstantsPage :: $menuPages );
+        
         $I->waitForElementVisible( ConstantsPage :: $pageTitle, 20 );
         $I->click( ConstantsPage :: $pageTitle );
 
-        $I->seeElement( ConstantsPage :: $postTitle );
+        $I->waitForElementVisible( ConstantsPage :: $postTitle, 20 );
         $I->fillField( ConstantsPage :: $postTitle, ConstantsPage :: $postTitleStr );
+
         $I->waitForElementVisible( ConstantsPage :: $postPublish, 20 );
         $I->click( ConstantsPage :: $postPublish );
 

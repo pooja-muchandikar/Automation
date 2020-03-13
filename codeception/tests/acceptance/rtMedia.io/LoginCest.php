@@ -11,9 +11,10 @@ class LoginCest
         $I->amOnPage( ConstantsPage :: $wpadmin );
         $I->waitForElementVisible( ConstantsPage :: $userLogin, 20 );
         $I->fillField( ConstantsPage :: $userLogin, ConstantsPage :: $userLoginStr );
-        $I->seeElement( ConstantsPage :: $userPass );
+
+        $I->waitForElementVisible( ConstantsPage :: $userPass,  20 );
         $I->fillField( ConstantsPage :: $userPass, ConstantsPage :: $userPassStr);
-        $I->seeElement( ConstantsPage :: $userSubmit );
+        $I->waitForElementVisible( ConstantsPage :: $userSubmit, 20 );
         $I->click( ConstantsPage :: $userSubmit );
 
         $I->waitForElementVisible( ConstantsPage :: $adminMenu, 20);

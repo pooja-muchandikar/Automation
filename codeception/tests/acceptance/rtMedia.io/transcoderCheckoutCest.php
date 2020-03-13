@@ -16,13 +16,13 @@ class transcoderCheckoutCest
 
         $I->amOnPage( ConstantsPage :: $myAccount );
        
-        $I->seeElement( ConstantsPage :: $transcoderMenuLink );
+        $I->waitForElementVisible( ConstantsPage :: $transcoderMenuLink, 20 );
         $I->click( ConstantsPage :: $transcoderMenuLink );
 
         $I->waitForElementVisible( ConstantsPage :: $subscribePlanButton, 20 );
         $I->click( ConstantsPage :: $subscribePlanButton );
 
-        $I->seeElement( ConstantsPage :: $tryNowButton );
+        $I->waitForElementVisible( ConstantsPage :: $tryNowButton, 20 );
         $I->wait(2);
         $I->click( ConstantsPage :: $tryNowButton );
 

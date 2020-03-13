@@ -14,22 +14,22 @@ class themeCheckoutFromThemesListingPageCest
 
         $I->amOnPage( ConstantsPage :: $myAccount );
 
-        $I->seeElement( ConstantsPage :: $themesMenuLink  );
+        $I->waitForElementVisible( ConstantsPage :: $themesMenuLink, 20  );
         $I->click( ConstantsPage :: $themesMenuLink );
 
         $I->scrollTo( ConstantsPage :: $wpBlockImage );
-        $I->seeElement( ConstantsPage :: $wpBlockImage );
-        $I->seeElement( ConstantsPage :: $wpImage );
+        $I->waitForElementVisible( ConstantsPage :: $wpBlockImage, 20 );
+        $I->waitForElementVisible( ConstantsPage :: $wpImage, 20 );
         $I->click( ConstantsPage :: $wpImage );
 
         echo ".........Theme Checkout Flow.........";
 
         echo ".....Add to Cart......";
-        $I->seeElement( ConstantsPage :: $eddSubmit );
+        $I->waitForElementVisible( ConstantsPage :: $eddSubmit, 20 );
         $I->click( ConstantsPage :: $eddSubmit );
 
         echo ".....Checkout..... ";
-        $I->seeElement( ConstantsPage :: $eddSubmit );
+        $I->waitForElementVisible( ConstantsPage :: $eddSubmit, 20 );
         $I->click( ConstantsPage :: $eddSubmit );
         $I->amOnPage( ConstantsPage :: $checkout );
 
