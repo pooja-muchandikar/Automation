@@ -11,14 +11,14 @@ class userRegistrationCest
         $I->amOnPage( '/' );
         $I->amOnPage( ConstantsPage :: $myAccount );
 
-        $I->seeElement( ConstantsPage :: $userRegisterLink );
+        $I->waitForElementVisible( ConstantsPage :: $userRegisterLink, 20 );
         $I->click( ConstantsPage :: $userRegisterLink );
 
-        $I->seeElement( ConstantsPage :: $userLogin );
+        $I->waitForElementVisible( ConstantsPage :: $userLogin, 20 );
         $I->fillField( ConstantsPage :: $userLogin, ConstantsPage :: $newUserStr );
-        $I->seeELement( ConstantsPage :: $newUserEmail );
+        $I->waitForElementVisible( ConstantsPage :: $newUserEmail, 20 );
         $I->fillField( ConstantsPage :: $newUserEmail, ConstantsPage :: $newUserEmailStr );
-        $I->seeElement( ConstantsPage :: $userSubmit );
+        $I->waitForElementVisible( ConstantsPage :: $userSubmit, 20 );
         $I->click( ConstantsPage :: $userSubmit );
 
         echo ".....Registration Done Successfully. Please check your email!.....";

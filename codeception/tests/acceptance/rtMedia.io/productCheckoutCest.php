@@ -14,12 +14,12 @@ class productCheckoutCest
 
         $I->amOnPage( ConstantsPage :: $myAccount );
 
-        $I->seeElement( ConstantsPage :: $checkoutMenu );
+        $I->waitForElementVisible( ConstantsPage :: $checkoutMenu, 20 );
         $I->click( ConstantsPage :: $checkoutMenu );
 
-        $I->seeElement( ConstantsPage :: $eddPurchase );
+        $I->waitForElementVisible( ConstantsPage :: $eddPurchase, 20 );
         $I->click( ConstantsPage :: $eddPurchase );
-        $I->seeElement( ConstantsPage :: $eddSubmit );
+        $I->waitForElementVisible( ConstantsPage :: $eddSubmit, 20 );
         $I->click( ConstantsPage :: $eddSubmit );
 
         echo "..........CHECKOUT PAGE.........";

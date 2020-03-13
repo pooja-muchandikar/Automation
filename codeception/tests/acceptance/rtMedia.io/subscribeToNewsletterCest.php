@@ -8,12 +8,12 @@ class subscribeToNewsletterCest
     public function frontpageworks(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        $I->seeElement( ConstantsPage :: $headerMenu );
+        $I->waitForElementVisible( ConstantsPage :: $headerMenu, 20 );
         $I->scrollTo( ConstantsPage :: $formWrapper );
 
         echo ".......Validate Subscribing to Newsletter.....";
 
-        $I->seeElement( ConstantsPage::$emailField );
+        $I->waitForElementVisible( ConstantsPage::$emailField, 20 );
         $I->fillfield( ConstantsPage::$emailField, ConstantsPage::$textField );
 
         $I->click( ConstantsPage::$validateField );

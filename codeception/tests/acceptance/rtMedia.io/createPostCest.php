@@ -13,11 +13,11 @@ class createPostCest
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
         
-        $I->seeElement( ConstantsPage :: $menuPosts );
+        $I->waitForElementVisible( ConstantsPage :: $menuPosts, 20 );
         $I->click( ConstantsPage :: $menuPosts );
 
         $I->amOnPage( ConstantsPage :: $postAdd );
-        $I->seeElement( ConstantsPage :: $postTitle );
+        $I->waitForElementVisible( ConstantsPage :: $postTitle, 20 );
         $I->fillField( ConstantsPage :: $postTitle, ConstantsPage :: $postTitleStr);
         $I->waitForElementVisible( ConstantsPage :: $postPublish, 20 );
         $I->click( ConstantsPage :: $postPublish );

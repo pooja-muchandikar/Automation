@@ -23,37 +23,28 @@
 	<meta name="robots" content="noindex,noarchive" />
 	<meta name="referrer" content="strict-origin-when-cross-origin" />
 		<meta name="viewport" content="width=device-width" />
-		<script src="https://rtmedia-dev.rtm.rt.gw/wp-includes/js/zxcvbn.min.js" type="text/javascript" async=""></script><script type="text/javascript">
-	addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
-	function s(id,pos){g(id).left=pos+'px';}
-	function g(id){return document.getElementById(id).style;}
-	function shake(id,a,d){c=a.shift();s(id,c);if(a.length&gt;0){setTimeout(function(){shake(id,a,d);},d);}else{try{g(id).position='static';wp_attempt_focus();}catch(e){}}}
-	addLoadEvent(function(){ var p=new Array(15,30,15,0,-15,-30,-15,0);p=p.concat(p.concat(p));var i=document.forms[0].id;g(i).position='relative';shake(i,p,20);});
-	</script>
 	<link rel="icon" href="https://upload.rt.gw/rtmedia-dev.rtm.rt.gw/wp-content/uploads/2015/11/cropped-rtcamp-favicon-1-32x32.png" sizes="32x32" />
 <link rel="icon" href="https://upload.rt.gw/rtmedia-dev.rtm.rt.gw/wp-content/uploads/2015/11/cropped-rtcamp-favicon-1-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="https://upload.rt.gw/rtmedia-dev.rtm.rt.gw/wp-content/uploads/2015/11/cropped-rtcamp-favicon-1-180x180.png" />
 <meta name="msapplication-TileImage" content="https://upload.rt.gw/rtmedia-dev.rtm.rt.gw/wp-content/uploads/2015/11/cropped-rtcamp-favicon-1-270x270.png" />
 	<style></style></head>
 	<body class="login js login-action-login wp-core-ui  locale-en-us">
-	<script type="text/javascript">
+	<script src="https://rtmedia-dev.rtm.rt.gw/wp-includes/js/zxcvbn.min.js" type="text/javascript" async=""></script><script type="text/javascript">
 		document.body.className = document.body.className.replace('no-js','js');
 	</script>
 		<div id="login">
 		<h1><a href="https://wordpress.org/">Powered by WordPress</a></h1>
-	<div id="login_error">	<strong>ERROR</strong>: The password you entered for the email address <strong>automationtest@rtcamp.com</strong> is incorrect. <a href="https://rtmedia-dev.rtm.rt.gw/wp-login.php?action=lostpassword">Lost your password?</a><br />
-</div>
-
-		<form name="loginform" id="loginform" action="https://rtmedia-dev.rtm.rt.gw/wp-login.php" method="post" style="position: relative; left: -15px;">
+	
+		<form name="loginform" id="loginform" action="https://rtmedia-dev.rtm.rt.gw/wp-login.php" method="post">
 			<p>
 				<label for="user_login">Username or Email Address</label>
-				<input type="text" name="log" id="user_login" aria-describedby="login_error" class="input" value="automationtest@rtcamp.com" size="20" autocapitalize="off" />
+				<input type="text" name="log" id="user_login" class="input" value="" size="20" autocapitalize="off" />
 			</p>
 
 			<div class="user-pass-wrap">
 				<label for="user_pass">Password</label>
 				<div class="wp-pwd">
-					<input type="password" name="pwd" id="user_pass" aria-describedby="login_error" class="input password-input" value="" size="20" />
+					<input type="password" name="pwd" id="user_pass" class="input password-input" value="" size="20" />
 					<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Show password">
 						<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
 					</button>
@@ -71,7 +62,7 @@
 				<a rel="nofollow" href="https://rtmedia-dev.rtm.rt.gw/wp-login.php?action=register">Register</a> | 					<a href="https://rtmedia-dev.rtm.rt.gw/wp-login.php?action=lostpassword">Lost your password?</a>
 								</p>
 					<script type="text/javascript">
-			function wp_attempt_focus() {setTimeout( function() {try {d = document.getElementById( "user_pass" ); d.value = "";d.focus(); d.select();} catch( er ) {}}, 200);}
+			function wp_attempt_focus() {setTimeout( function() {try {d = document.getElementById( "user_login" );d.focus(); d.select();} catch( er ) {}}, 200);}
 wp_attempt_focus();
 if ( typeof wpOnload === 'function' ) { wpOnload() }		</script>
 				<p id="backtoblog"><a href="https://rtmedia-dev.rtm.rt.gw/">
@@ -131,7 +122,7 @@ window.lodash = _.noConflict();
 <script type="text/javascript" src="https://rtmedia-dev.rtm.rt.gw/wp-includes/js/dist/api-fetch.min.js"></script>
 <script type="text/javascript">
 wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://rtmedia-dev.rtm.rt.gw/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "1e3fa77faf" );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "5467e31a03" );
 wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
 wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
 wp.apiFetch.nonceEndpoint = "https://rtmedia-dev.rtm.rt.gw/wp-admin/admin-ajax.php?action=rest-nonce";
