@@ -282,6 +282,9 @@ class Constants {
 	 public static $tryNowButton = '.wp-block-button.transcoder-try-now-button';
 	 public static $eddPurchaseReceipt = '#edd_purchase_receipt';
 	 
+	 //Custom 
+	 public static $subscribeMsg = "Thank You for Subscribing";
+	 public static $showMsg = "No email-id added";
 
 
 

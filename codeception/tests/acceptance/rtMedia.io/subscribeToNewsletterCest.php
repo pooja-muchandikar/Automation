@@ -1,6 +1,8 @@
 <?php
 
 use Page\Constants as ConstantsPage;
+use Page\commonFunctions as commonFunctionsPage;
+
 use \Codeception\Util\Locator;
 
 class subscribeToNewsletterCest
@@ -15,15 +17,21 @@ class subscribeToNewsletterCest
 
         $I->waitForElementVisible( ConstantsPage::$emailField, 20 );
         $I->fillfield( ConstantsPage::$emailField, ConstantsPage::$textField );
-
         $I->click( ConstantsPage::$validateField );
 
-        echo "....... Thank You for subscribing to the Newsletter!!!.....";
+        $verifyifEmailIsCorrect = new commonFunctionsPage( $I );
 
+        $verifySubscribe = $verifyifEmailIsCorrect->verifyStatus( ConstantsPage::$emailField );
 
+        if ( $verifySubscribe ) {
+            echo nl2br( ConstantsPage::$subscribeMsg . "\n" );
+        } else {
+            $verifyifEmailIsCorrect->validEmail( ConstantsPage::$showMsg );
+        }
 
     }
 }
+
 
 ?>
 
