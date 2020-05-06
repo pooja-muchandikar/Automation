@@ -7,8 +7,9 @@ use \Codeception\Util\Locator;
 
 class subscribeToNewsletterCest
 {
-    public function frontpageworks(AcceptanceTester $I)
+    public function subscribeNewsletter( AcceptanceTester $I, $verifyEmail = 'true' )
     {
+        // $I = $AcceptanceTester;
         $I->amOnPage('/');
         $I->waitForElementVisible( ConstantsPage :: $headerMenu, 20 );
         $I->scrollTo( ConstantsPage :: $formWrapper );
@@ -17,17 +18,11 @@ class subscribeToNewsletterCest
 
         $I->waitForElementVisible( ConstantsPage::$emailField, 20 );
         $I->fillfield( ConstantsPage::$emailField, ConstantsPage::$textField );
-        $I->click( ConstantsPage::$validateField );
 
-        $verifyifEmailIsCorrect = new commonFunctionsPage( $I );
-
-        $verifySubscribe = $verifyifEmailIsCorrect->verifyStatus( ConstantsPage::$emailField );
-
-        if ( $verifySubscribe ) {
-            echo nl2br( ConstantsPage::$subscribeMsg . "\n" );
-        } else {
-            $verifyifEmailIsCorrect->validEmail( ConstantsPage::$showMsg );
-        }
+        if ( $verifyEmail = 'true' ) {
+            $I->click( ConstantsPage::$validateField );
+            $I->see( ConstantsPage:: $successMessage );
+        } 
 
     }
 }

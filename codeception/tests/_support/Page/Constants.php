@@ -283,7 +283,7 @@ class Constants {
 	 public static $eddPurchaseReceipt = '#edd_purchase_receipt';
 	 
 	 //Custom 
-	 public static $subscribeMsg = "Thank You for Subscribing";
+	 public static $successMessage = "Thank You";
 	 public static $showMsg = "No email-id added";
 
 
