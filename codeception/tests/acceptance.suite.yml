@@ -10,4 +10,9 @@ modules:
             port: 9515
             window_size: 'maximize'
 
-        - \Helper\Acceptance    
+        - \Helper\Acceptance
+
+        # - VisualCeption:
+        #     maximumDeviation: 5                                   # deviation in percent
+        #     saveCurrentImageIfFailure: true                       # if true, VisualCeption saves the current
+        #     fullScreenShot: true       

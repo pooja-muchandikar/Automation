@@ -5,7 +5,7 @@ use Page\Constants as ConstantsPage;
 class LoginCest 
 {
 
-    public function frontpageWorks(AcceptanceTester $I)
+    public function verifyLogin( AcceptanceTester $I )
     {
         
         $I->amOnPage( ConstantsPage :: $wpadmin );
@@ -18,8 +18,6 @@ class LoginCest
         $I->click( ConstantsPage :: $userSubmit );
 
         $I->waitForElementVisible( ConstantsPage :: $adminMenu, 20);
-
-        echo ".....User Logged-in Successfully!!!.....";
 
     }
 }

@@ -285,6 +285,8 @@ class Constants {
 	 //Custom 
 	 public static $successMessage = "Thank You";
 	 public static $showMsg = "No email-id added";
+	 public static $errorStr = "Enter Valid Username/Email";
+	 public static $confirmMessageStr = 'Reset email has been sent!!';
 
 
 

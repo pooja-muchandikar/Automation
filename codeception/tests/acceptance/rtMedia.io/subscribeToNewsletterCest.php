@@ -9,7 +9,6 @@ class subscribeToNewsletterCest
 {
     public function subscribeNewsletter( AcceptanceTester $I, $verifyEmail = 'true' )
     {
-        // $I = $AcceptanceTester;
         $I->amOnPage('/');
         $I->waitForElementVisible( ConstantsPage :: $headerMenu, 20 );
         $I->scrollTo( ConstantsPage :: $formWrapper );
