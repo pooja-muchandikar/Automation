@@ -25,8 +25,6 @@ class createTicketCest
         $I->waitForElementVisible( ConstantsPage :: $submitForm, 20 );
         $I->click( ConstantsPage :: $submitForm );
 
-        echo ".....Ticket has been submitted. We will get back to you for your query soon!!.....";
-
         $I->amOnPage( ConstantsPage :: $support );
         $I->click( ConstantsPage :: $userAccount );
         $I->executeJS( ConstantsPage :: $userAccountSupportTab );

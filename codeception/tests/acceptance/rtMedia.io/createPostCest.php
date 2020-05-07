@@ -26,11 +26,7 @@ class createPostCest
         $I->click( ConstantsPage :: $publishButton );
         $I->wait(2);
 
-        echo ".....Post Created Successfully!.....";
-
-        $logout = new LogoutPage( $I );
-        $logout->logout();
-
+    
 
     }
 }

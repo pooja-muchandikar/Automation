@@ -36,7 +36,7 @@ class productCheckoutCest
         $I->waitForElementVisible( ConstantsPage :: $eddDownloadZip, 20 );
         $I->click( ConstantsPage :: $eddDownloadZip );
         
-        echo ".........Product ZIP Downloaded Successfully..........";
+        // echo ".........Product ZIP Downloaded Successfully..........";
     }
 }
 

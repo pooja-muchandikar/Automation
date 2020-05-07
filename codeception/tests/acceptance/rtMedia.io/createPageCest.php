@@ -7,7 +7,7 @@ use Page\Constants as ConstantsPage;
 
 class createPageCest
 {
-    public function frontpageWorks(AcceptanceTester $I)
+    public function pageCreation(AcceptanceTester $I)
     {
         $loginPage = new LoginPage( $I );
         $loginPage->loginAsAdmin();
@@ -28,11 +28,6 @@ class createPageCest
         $I->click( ConstantsPage :: $publishButton );
         $I->wait(1);
 
-        echo ".....Page Created Successfully!.....";
-
-        $logout = new LogoutPage( $I );
-        $logout->logout();
-
-    
+            
     }
 }
